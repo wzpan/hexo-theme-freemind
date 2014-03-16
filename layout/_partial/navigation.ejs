@@ -11,12 +11,8 @@
             <div class="nav-collapse collapse">
             <ul class="nav">				
 			    <% for (var i in theme.menu){ %>
-				   <li><a href="<% if (cache) { %><%- theme.menu[i].url %> <% } else { %><%- theme.menu[i].url %><% } %>" title="<%- theme.menu[i].intro %>"><i class="<%- theme.menu[i].icon %>"></i>&nbsp; <%= theme.menu[i].title %></a></li>				   				    
+				   <li><a href="<%= config.root %><%- theme.menu[i].url %>" title="<%- theme.menu[i].intro %>"><i class="<%- theme.menu[i].icon %>"></i>&nbsp; <%= theme.menu[i].title %></a></li>				   				    
     			<% } %>
-				<% if (theme.wiki){ %>
-				<li class="divider-vertical"></li>
-			   	<li><a href="<% if (cache) { %><%- theme.wiki[0].url %> <% } else { %><%- theme.wiki[0].url %><% } %>" title="<%- theme.wiki[0].intro %>"><i class="<%- theme.wiki[0].icon %>"></i>&nbsp; <%= theme.wiki[0].title %></a></li>				   
-				<% } %>
             </ul>			
             </div> <!-- nav-collapse collapse -->
         </div> <!-- container -->
