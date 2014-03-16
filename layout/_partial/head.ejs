@@ -37,7 +37,7 @@
     <meta property="og:image" content="<%= config.cover %>"/>
   <% } %>
 
-  <link href="/images/favicon.png" rel="icon">
+  <link href="<%- config.root %><- theme.favicon %>" rel="icon">
   <link rel="alternate" href="<% if (theme.rss){ %><%- theme.rss %><% } else { %><%- config.root %>atom.xml<% } %>" title="<%= config.title %>" type="application/atom+xml">
   <link rel="stylesheet" href="<%- config.root %>css/bootstrap.css" media="screen" type="text/css">
   <link rel="stylesheet" href="<%- config.root %>css/bootstrap-responsive.css" media="screen" type="text/css">

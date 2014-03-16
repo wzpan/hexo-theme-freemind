@@ -35,4 +35,6 @@ widgets:
 - recent_posts  
 - links
 
+favicon: favicon.ico
+
 fancybox: true
