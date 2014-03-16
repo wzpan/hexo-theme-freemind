@@ -7,7 +7,7 @@
     <% if (item.excerpt && index){ %>
       <%- item.excerpt %>	  
    <% } else { %>
-   	  <%= markdown(item.content) %>
+   	  <%- item.content %>
    <% } %>   
    <% if (item.feature ) { %>
       </li>

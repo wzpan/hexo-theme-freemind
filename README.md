@@ -51,6 +51,8 @@ $ cp -av freemind-source/* source/
 $ rm -r freemind-source
 ```
 
+> Some people may argue that I should embed these pages in the theme. This really makes sense, but currently I don't have time to do so. If you know how, please send me patches.
+
 That's all. Enjoy it!
 
 ## License ##
