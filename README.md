@@ -16,7 +16,7 @@ Yet another bootstrap based theme for Hexo.
   - badges - a label with text and specified color;
   - alerts - alert messages with text and specified color; 
   - side notes - a note at the right side of the page;
-  - side images - an image at the right side of the page;
+  - side images - an image at the right side of the page.
 
 ## Install ##
 
