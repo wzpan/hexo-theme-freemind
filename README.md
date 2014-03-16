@@ -20,13 +20,13 @@ Yet another bootstrap based theme for Hexo.
 
 ## Install ##
 
-1. `cd` to your theme folder, and clone the freemind theme:
+1) `cd` to your theme folder, and clone the freemind theme:
 
 ``` sh
 $ git clone git@github.com:wzpan/freemind.git
 ```
 
-2. modified your root `_config.yml` and change to freemind theme:
+2) modified your root `_config.yml` and change to freemind theme:
 
 ```
 # Extensions
@@ -35,14 +35,14 @@ $ git clone git@github.com:wzpan/freemind.git
 theme: freemind
 ```
 
-3. `cd` to the root blog folder, and install [hexo-tag-bootstrap](https://github.com/wzpan/hexo-tag-bootstrap):
+3) `cd` to the root blog folder, and install [hexo-tag-bootstrap](https://github.com/wzpan/hexo-tag-bootstrap):
 
 ``` sh
 $ cd ..
 $ npm install hexo-tag-bootstrap --save
 ```
 
-4. Freemind offers you the customized Archives, Categories, Tags and About pages. It's recommended to download these pages and save them to your `source` folders:
+4) Freemind offers you the customized Archives, Categories, Tags and About pages. It's recommended to download these pages and save them to your `source` folders:
 
 ``` sh
 $ wget https://github.com/wzpan/freemind/archive/source.zip
