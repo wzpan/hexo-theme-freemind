@@ -1,0 +1,184 @@
+/* Responsive
+-------------------------------------------------- */
+
+/* Desktop large
+------------------------- */
+@media (min-width: 1200px) {
+  .sidenav {
+    width: 258px;
+  }
+  .sidenav > li > a {
+    width: 230px \9; /* Override the previous IE8-9 hack */
+  }
+
+  span.margin-div-inner {
+  width: 270px;
+  margin-left: 20px;
+  font-size: 13px;
+  padding-left: 14px;
+  }
+
+}
+
+/* Desktop
+------------------------- */
+@media (min-width: 980px) and (max-width: 1199px)  {
+  /* When affixed, space properly */
+  .sidenav {
+    top: 0;
+    width: 218px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-right: 0;
+  }
+
+  span.margin-div-inner {
+  width: 210px;
+  margin-left: 20px;
+  font-size: 13px;
+  padding-left: 14px;
+  }  
+}
+
+/* Tablet to desktop
+------------------------- */
+@media (min-width: 768px) and (max-width: 979px) {
+  /* Remove any padding from the body */
+  body {
+    padding-top: 0;
+  }
+
+  .navbar{
+    margin-bottom: 0;
+  }
+
+  .navbar .nav{
+    width:100%;
+  }
+  
+  .navbar .navright{
+    float:left;
+    width:100%;    
+  }
+
+  /* Adjust sidenav width */
+  .sidenav {
+    width: 166px;
+    margin-top: 20px;
+  }
+  
+  .sidenav.affix {
+    top: 0;
+  }
+
+  span.margin-div-inner {
+    width: 166px;
+    margin-left: 20px;
+    font-size: 0.5em;
+    padding-left: 14px;
+  }
+
+  .site-search{
+    float: right;
+  }
+
+  .site-search{
+    display:block; overflow: hidden; width: 0; height: 0; 
+  }
+}
+
+/* Tablet
+------------------------- */
+@media (min-width: 481px) and (max-width: 767px) {
+  /* Remove any padding from the body */
+  body {
+    padding-top: 0;
+  }
+
+  .navbar{
+    margin-bottom: 0;
+  }
+
+  .navbar .nav{
+    width:100%;
+  }
+  
+  .navbar .navright{
+    float:left;
+    width:100%;    
+  }
+
+  /* hide the margin-note*/
+  span.margin-note-marker, span.margin-div-inner,
+  .site-search{
+    display:block; overflow: hidden; width: 0; height: 0; 
+  }
+
+  /* Sidenav */
+  .sidenav {
+    margin-bottom: 20px;
+    position: static;
+    width: auto;
+    top: 0;
+  }
+
+  .page > h3.title span.date {
+    padding-left: 1em;
+    position: relative;
+  }
+
+}
+
+/* Landscape phones
+------------------------- */
+@media (max-width: 480px) {
+
+  /* hide the margin-note*/
+  span.margin-note-marker, span.margin-div-inner,
+  .site-search {
+    display:block; overflow: hidden; width: 0; height: 0; 
+  }
+
+    
+  .navbar{
+    margin-bottom: 0;
+  }
+
+  .navbar .nav{
+    width:100%;
+  }
+  
+  .navbar .navright{
+    float:left;
+    width:100%;    
+  }
+  
+  /* Remove padding above jumbotron */
+  body {
+    padding-top: 0;
+  }
+
+  /* Change up some type stuff */
+  h2 small {
+    display: block;
+  }
+
+  /* Do our best to make tables work in narrow viewports */
+  table code {
+    white-space: normal;
+    word-wrap: break-word;
+    word-break: break-all;
+  }
+
+  .sidenav{
+    position: static;
+    width: auto;
+    top: 0;
+  }
+
+  .page > h3.title span.date {
+    padding-left: 1em;
+    position: relative;
+  }
+
+}

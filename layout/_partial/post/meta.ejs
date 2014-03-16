@@ -1,0 +1,39 @@
+<div class="span3">
+
+	<!-- ToC -->
+	<ul class="tag_box">
+	  <% if (item.date){ %>
+      <li><i class="fa fa-clock-o"></i></li>
+      <li><%= item.date.format(config.date_format) %></li>
+	  <% } %>
+    </ul>
+    <p>
+    <ul class="tag_box">
+	  <% if (item.categories) { %>
+        <%- partial('category') %>
+	  <% } %>
+    </ul>
+    </p>
+
+    <p>
+    <ul class="tag_box">
+	  <% if (item.tags) { %>
+	  <%- partial('tag') %>
+	  <% } %>
+    </ul>
+    </p>
+
+	<p>
+	<% if(item.toc){ %>
+	   <i class="fa fa-bars"></i>
+	   <div class="toc">
+			<%- toc(item.content, {class: "toc-article", list_number:false}) %>
+		</div>
+	<% } %>
+
+	</p>
+	
+    <hr>
+	
+	
+</div><!-- span3 -->

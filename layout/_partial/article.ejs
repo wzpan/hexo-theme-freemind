@@ -1,0 +1,34 @@
+<%- partial('post/title', {item: item, index: false}) %>
+
+<div class="row-fluid <% if (post) { %>post<% } else { %>page<% } %>">
+	<!-- span -->
+	<% if (post) { %>
+	<div class="span9">
+	<% } else { %>
+	<div class="span12">
+	<% } %>
+
+	<!-- content -->
+	<% if (item.description) { %>
+		<div class="alert alert-success">
+			<i class="fa fa-info-circle"></i> <%= item.description %>
+		</div> <!-- alert -->
+	<% } %>
+
+	<!-- content -->
+	<div class="mypost">
+	  <%- item.content %>	  
+	</div>
+
+	<!-- pagination -->
+	  <%- partial('post/pagination', {page: item}) %>
+	
+	<!-- comment -->
+	<%- partial('post/comment', {page: item}) %>
+		
+	</div> <!-- span9/span12 -->
+	<% if (post) { %>
+		<%- partial('post/meta', {item: item}) %>
+	<% } %>
+
+</div><!-- row-fluid post-full -->

@@ -1,0 +1,10 @@
+<% if (item.tags && item.tags.length){ %>
+  <li><i class="fa fa-tags"></i></li>
+  <%
+  var tags = [];
+  item.tags.forEach(function(tag){
+    tags.push('<li><a href="' + config.root + tag.path + '">' + tag.name + '<span>' + tag.length  + '</span></a></li>');
+  });
+  %>
+  <%- tags.join(' ') %>
+<% } %>

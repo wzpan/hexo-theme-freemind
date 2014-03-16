@@ -1,0 +1,38 @@
+slogan: Yet another bootstrap theme.
+
+menu:
+  - title: Archives
+    url: /archives
+    intro: All the articles.
+    icon: fa fa-archive
+  - title: Categories
+    url: /categories
+    intro: All the categories.
+    icon: fa fa-folder
+  - title: Tags
+    url: /tags
+    intro: All the tags.
+    icon: fa fa-tags
+  - title: About
+    url: /about
+    intro: About me.
+    icon: fa fa-user
+
+links:
+  - title: My Github
+    url: http://www.github.com/wzpan
+    intro: My Github account.
+    icon: fa fa-github
+  - title: My LinkedIn
+    url: http://www.linkedin.com/pub/weizhou-pan/5b/8a0/161
+    intro: My Linkin account.
+    icon: fa fa-linkedin
+
+widgets:
+- search
+- category
+- tagbox
+- recent_posts  
+- links
+
+fancybox: true

@@ -1,0 +1,35 @@
+<div class="row-fluid page">
+
+	<% if (theme.widgets.length) { %>
+	<div class="span9">
+	<% } else { %>
+	<div class="span12">
+	<% } %>
+
+		<%- partial('post/slogan') %>
+        <div class="results"></div>
+
+		<!-- title and entry -->
+		<% page.posts.each(function(item){ %>
+			<%- partial('post/title', {item: item, index: index}) %>
+			<%- partial('post/entry', {item: item, index: index}) %>
+		<% }); %>
+
+		<hr>
+		
+		<div>
+  		<center>
+		<%- partial('index_pagination') %>
+    	
+  		</center>
+		</div>
+		<!-- pagination -->
+		
+		
+	</div> <!-- span9 -->
+
+	<% if (theme.widgets.length) { %>
+		<%- partial('sidebar') %>
+	<% } %>
+	
+</div> <!-- row-fluid -->
