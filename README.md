@@ -43,7 +43,7 @@ layout: categories
 ---
 ```
 
-Tags and About pages are created in a similar way, except that the layout are `tags` and `page` respectively.
+Tags and About pages are created in a similar way, except that the layouts are `tags` and `page` respectively.
 
 > Some people may argue that I should embed these pages in the theme. This really makes sense, but currently I don't have time to do so. If you know how, **welcome to send me patches**.
 
