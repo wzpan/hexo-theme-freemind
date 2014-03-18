@@ -14,7 +14,7 @@ Yet another [bootstrap](http://getbootstrap.com) based theme for [Hexo](http://z
   - textcolor - a paragraph of text with specified color;
   - button - a button with target links, text and specified color;
   - label - a label with text and specified color;
-  - badge - a label with text and specified color;
+  - badge - a badge with text;
   - alert - alert messages with text and specified color; 
 
 ## Install ##
