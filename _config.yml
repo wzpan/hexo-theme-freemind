@@ -35,7 +35,7 @@ widgets:
 - recent_posts  
 - links
 
-rss: /atom.xml
+rss: 
 fancybox: true
 favicon: favicon.png
-google_analytics: 
+google_analytics: UA-49061001-1
