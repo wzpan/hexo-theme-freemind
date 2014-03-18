@@ -1,7 +1,7 @@
 Freemind
 ===
 
-Yet another bootstrap based theme for Hexo. Freemind aims at fully taking advantages of Bootstrap.
+Yet another [bootstrap](http://getbootstrap.com) based theme for [Hexo](http://zespia.tw/hexo/). Freemind aims at fully taking advantages of Bootstrap.
 
 * [Demo](http://hahack.tk/freemind/)
 * [Q&A](http://hahack.tk/freemind/2014/03/16/qna/)
