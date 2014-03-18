@@ -1,33 +1,33 @@
 <!-- title -->
 <div class="page-header">
-	 <h1><i class="fa fa-folder"></i> <%= page.title %></h1>
+	 <h1><i class="fa fa-tags"></i> <%= page.title %></h1>
 </div>
 
-<div class="row-fluid page">
+<div class="row page">
 
 	<% if (theme.widgets.length) { %>
-	<div class="span9">
+	<div class="col-md-9">
 	<% } else { %>
-	<div class="span12">
+	<div class="col-md-12">
 	<% } %>
 
-<% if (site.categories.length){ %>
+<% if (site.tags.length){ %>
 	<div class="widget">
-		<ul class="tag_box inline">
-		<% site.categories.sort('name').each(function(item){ %>
+		<ul class="tag_box inline list-unstyled">
+		<% site.tags.sort('name').each(function(item){ %>
 			<li><a href="#<%= item.name %>"><%= item.name %><span><%= item.posts.length %></span></a></li>
 		<% }); %>
 		</ul>
 	</div>
 
 <div class="archive">
-	<% site.categories.sort('name').each(function(item){ %>
+	<% site.tags.sort('name').each(function(item){ %>
 
 	   <h4 class="archive-ul show" data-toggle="collapse" data-target="#<%= item.name %>"> <%= item.name %> <b class="caret"></b></h4>
 	   <ul id="<%= item.name %>" class="collapse in">
 
 	   <% site.posts.sort('date', -1).forEach(function(it){ %>
-		   <% if (it.categories._index.indexOf(item._id) > -1){ %>
+		   <% if (it.tags._index.indexOf(item._id) > -1){ %>
 	   	   	 <li class="listing-item"><a href="<%= config.root %><%= it.path %>" <% if (it.description) { %> title="<%= it.description %>" <% } %>><%= it.title %></a></li>
 		  <% } %>
 	   <% }); %>
@@ -39,10 +39,10 @@
 
 <% } %>
 
-</div> <!-- span9 -->
+</div> <!-- col-md-9 -->
 
-   <% if (theme.widgets.length) { %>
-	   <%- partial('_partial/sidebar') %>
-   <% } %>
+	<% if (theme.widgets.length) { %>
+		<%- partial('_partial/sidebar') %>
+	<% } %>
 
 </div> <!-- row-fluid -->

@@ -1,72 +1,72 @@
 <%
-var title = '';
-if (page.category) title = page.category;
-if (page.tag) title = page.tag;
-if (page.archive){
-  if (page.year) title = page.year + (page.month ? '/' + page.month : '');
-  else title = __('archive_a');
-}
-
-var last_year = 1970;
-var is_first_year = 1;
-%>
+   var title = '';
+   if (page.category) title = page.category;
+   if (page.tag) title = page.tag;
+   if (page.archive){
+   	  if (page.year) title = page.year + (page.month ? '/' + page.month : '');
+   	  else title = __('archive_a');
+   }
+   var year, month;
+   var last_year = 1970;
+   var is_first_year = 1;
+   %>
 
 <!-- title -->
 <div class="page-header">
-	 <h1 class="archive-title<% if (page.tag){ %>-tag<% } else if (page.category){ %>-category<% } %>"><%= title %></h1>
+  <h1 class="archive-title<% if (page.tag){ %>-tag<% } else if (page.category){ %>-category<% } %>"><%= title %></h1>
 </div>
 
-<div class="row-fluid page">
-	<!-- span -->
-	<% if (theme.widgets.length) { %>
-	<div class="span9">
+<div class="row page">
+  <!-- cols -->
+  <% if (theme.widgets.length) { %>
+  <div class="col-md-9">
 	<% } else { %>
-	<div class="span12">
-	<% } %>
+	<div class="col-md-12">
+	  <% } %>
 
-
-<% if (pagination == 2){ %>
-	<!-- display as entry -->
-	<% page.posts.each(function(item){ %>
-		<%- partial('post/title', {item: item, index: true}) %>
-		<%- partial('post/entry', {item: item, index: true}) %>
-	<% }); %>
-<% } else { %>
-	<!-- display as list -->
-	<div class="archive">
-	<% page.posts.each(function(item){ %>
+	  <% if (pagination == 2){ %>
+	  <!-- display as entry -->
+	  <% page.posts.each(function(item){ %>
+	  <%- partial('post/title', {item: item, index: true}) %>
+	  <%- partial('post/entry', {item: item, index: true}) %>
+	  <% }); %>
+	  <% } else { %>
+	  <!-- display as list -->
+	  <div class="archive">
+		<% page.posts.each(function(item){ %>		
 		<%
-		   var year = item.date.toDate().getFullYear();
-		   var month = item.date.toDate().getMonth();
-		%>
-	
+		   year = item.date.toDate().getFullYear();
+		   month = item.date.toDate().getMonth();
+		   %>
 		<% if (year != last_year){ %>
+			<% if (!is_first_year) { %>
 			</ul>
-			<% last_year = year; %>
-			<h4 class="archive-ul show" data-toggle="collapse" data-target="#<%= year %>"> <%= year %> <b class="caret"></b></h4>
-			<ul id="<%= year %>" class="collapse in">
-		<% } %>
-	
-		<li class="listing-item">
-			<span class="date_class"> <%= item.date.format("YYYY-MM-DD") %> </span> &raquo;
-			<% if (item.link){ %>
-				<% if (item.title){ %>
-				 	<span class="title link"><a href="<%- item.link %>" target="_blank" <% if (item.description) { %> title="<%= item.description %>" <% } %>><%= item.title %></a></span>
-				<% } else { %>
-					<span class="title link"><a href="<%- item.link %>" target="_blank" <% if (item.description) { %> title="<%= item.description %>" <% } %>><%= item.link %></a></span>
-				<% } %>
-			<% } else { %>
-				<span class="title"><a href="<%- config.root %><%- item.path %>" <% if (item.description) { %> title="<%= item.description %>" <% } %>><%= item.title %></a></span>
 			<% } %>
-		</li>			
-	<% }); %>
-	</ul>
+			<% is_first_year = 0 %>
+			<h4 class="archive-ul" data-toggle="collapse" data-target="#<%= year %>"><%= year %><b class="caret"></b></h4>
+			<ul id="<%= year %>" class="collapse in">
+			<% last_year = year; %>
+		<% } %>
+<li class="listing-item">
+  <span class="date_class"> <%= item.date.format("YYYY-MM-DD") %> </span> &raquo;
+  <% if (item.link){ %>
+  <% if (item.title){ %>
+  <span class="title link"><a href="<%- item.link %>" target="_blank" <% if (item.description) { %> title="<%= item.description %>" <% } %>><%= item.title %></a></span>
+  <% } else { %>
+  <span class="title link"><a href="<%- item.link %>" target="_blank" <% if (item.description) { %> title="<%= item.description %>" <% } %>><%= item.link %></a></span>
+  <% } %>
+  <% } else { %>
+  <span class="title"><a href="<%- config.root %><%- item.path %>" <% if (item.description) { %> title="<%= item.description %>" <% } %>><%= item.title %></a></span>
+  <% } %>
+</li>			
+<% }); %>
+</ul>
 </div>
 <% } %>
 
-</div> <!-- span9/span12 -->
+</div> <!-- col-md-9/col-md-12 -->
 
 <% if (theme.widgets.length) { %>
-	<%- partial('sidebar') %>
+<%- partial('sidebar') %>
 <% } %>
 

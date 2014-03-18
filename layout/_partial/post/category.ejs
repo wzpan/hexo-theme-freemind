@@ -1,5 +1,3 @@
-<% if (item.categories && item.categories.length){ %>
-  <li><i class="fa fa-folder"></i></li>
   <%
   var cats = [];
   item.categories.forEach(function(cat){
@@ -9,4 +7,3 @@
   <li>
     <%- cats.join(' ') %>
   </li>
-<% } %>

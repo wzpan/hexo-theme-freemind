@@ -1,20 +1,23 @@
-<div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-            <a class="brand" href="<%- config.root %>"><%= config.title %></a>
-            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-
-            <div class="nav-collapse collapse">
-            <ul class="nav">				
-			    <% for (var i in theme.menu){ %>
-				   <li><a href="<%= config.root %><%- theme.menu[i].url %>" title="<%- theme.menu[i].intro %>"><i class="<%- theme.menu[i].icon %>"></i>&nbsp; <%= theme.menu[i].title %></a></li>				   				    
-    			<% } %>
-            </ul>			
-            </div> <!-- nav-collapse collapse -->
-        </div> <!-- container -->
-     </div> <!-- navbar-inner -->
-</div> <!-- navbar navbar-inverse -->
+<nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+	  <a class="navbar-brand" href="<%- config.root %>"><%= config.title %></a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  <% theme.menu.forEach(function(m){ %>
+		  <li>
+			<a href="<%- config.root %><%- m.url %>" title="<%- m.intro %>">
+			  <i class="<%- m.icon %>"></i><%- m.title %>
+			</a>
+		  </li>
+		  <% }) %>
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>

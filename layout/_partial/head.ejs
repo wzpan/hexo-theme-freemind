@@ -37,24 +37,22 @@
     <meta property="og:image" content="<%= config.cover %>"/>
   <% } %>
 
-  <link href="<%- config.root %><- theme.favicon %>" rel="icon">
-  <link rel="alternate" href="<% if (theme.rss){ %><%- theme.rss %><% } else { %><%- config.root %>atom.xml<% } %>" title="<%= config.title %>" type="application/atom+xml">
-  <link rel="stylesheet" href="<%- config.root %>css/bootstrap.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="<%- config.root %>css/bootstrap-responsive.css" media="screen" type="text/css">
+  <% if (theme.rss){ %>
+    <link rel="alternative" href="<%- config.root %><%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml">
+  <% } %>
+  <% if (theme.favicon){ %>
+    <link href="<%- config.root %><%- theme.favicon %>" rel="icon">
+  <% } %>
+  
+  <link rel="stylesheet" href="<%- config.root %>css/bootstrap.min.css" media="screen" type="text/css">
   <link rel="stylesheet" href="<%- config.root %>css/font-awesome.css" media="screen" type="text/css">
   <link rel="stylesheet" href="<%- config.root %>css/style.css" media="screen" type="text/css">
   <link rel="stylesheet" href="<%- config.root %>css/highlight.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="<%- config.root %>css/sidenav.css" media="screen" type="text/css">  
-  <link rel="stylesheet" href="<%- config.root %>css/responsive.css" media="screen" type="text/css">
   <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
-<% if (cache) { %>
-    <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow|PT+Sans:400,400italic,700,700italic|Droid+Serif:400,400italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-<% } %>
-  
-<script src="<%- config.root %>dist/jquery-2.0.3.min.js"></script>
+  <script src="<%- config.root %>dist/jquery-2.0.3.min.js"></script>
 
-<%- partial('post/google_analytics') %>
+  <!-- analytics -->
+  <%- partial('post/google_analytics') %>
 
 </head>

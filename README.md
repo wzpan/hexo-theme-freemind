@@ -1,7 +1,7 @@
 Freemind
 ===
 
-Yet another bootstrap based theme for Hexo.
+Yet another bootstrap based theme for Hexo. Freemind aims at fully taking advantages of Bootstrap.
 
 * [Demo](http://hahack.tk/freemind/)
 * [Q&A](http://hahack.tk/freemind/2014/03/16/qna/)
@@ -10,13 +10,12 @@ Yet another bootstrap based theme for Hexo.
 ## Features ##
 
 * **Bootstrap** - get the power of Twitter Bootstrap with minimal hassle;
-* **Tag plugins** - offers luxuriant Bootstrap tag plugins, including:
-  - buttons - a button with target links, text and specified color;
-  - labels - a label with text and specified color;
-  - badges - a label with text and specified color;
-  - alerts - alert messages with text and specified color; 
-  - side notes - a note at the right side of the page;
-  - side images - an image at the right side of the page.
+* **Tag plugins** - luxuriant Bootstrap tag plugins, provided by [hexo-tag-bootstrap](https://github.com/wzpan/hexo-tag-bootstrap), including:
+  - textcolor - a paragraph of text with specified color;
+  - button - a button with target links, text and specified color;
+  - label - a label with text and specified color;
+  - badge - a label with text and specified color;
+  - alert - alert messages with text and specified color; 
 
 ## Install ##
 
@@ -29,31 +28,89 @@ $ git clone git@github.com:wzpan/freemind.git theme/freemind
 2) install [hexo-tag-bootstrap](https://github.com/wzpan/hexo-tag-bootstrap):
 
 ``` sh
-$ cd ..
 $ npm install hexo-tag-bootstrap --save
 ```
 
-3) modified your root `_config.yml` and change to freemind theme:
+3) Create pages
+
+Freemind offers you the customized Categories, Tags and About pages. But you need to manually create these page at your 'source' folder.
+
+For example, to create a `Categories` page, you may create a `index.html` file at `source/categories/` folder with the following contents:
 
 ```
-# Extensions
-## Plugins: https://github.com/tommy351/hexo/wiki/Plugins
-## Themes: https://github.com/tommy351/hexo/wiki/Themes
-theme: freemind
+title: Categories
+layout: categories
+---
 ```
 
-4) Freemind offers you the customized Archives, Categories, Tags and About pages. It's recommended to download these pages and save them to your `source` folders:
+Tags and About pages are created in a similar way, except that the layout are `tags` and `page` respectively.
+
+> Some people may argue that I should embed these pages in the theme. This really makes sense, but currently I don't have time to do so. If you know how, **welcome to send me patches**.
+
+## Enable ##
+
+Modify `theme` setting in your `_config.yml` to `freemind`.
+
+## Update ##
 
 ``` sh
-$ wget https://github.com/wzpan/freemind/archive/source.zip
-$ unzip source.zip
-$ cp -av freemind-source/* source/
-$ rm -r freemind-source
+$ cd themes/landscape
+$ git pull
 ```
 
-> Some people may argue that I should embed these pages in the theme. This really makes sense, but currently I don't have time to do so. If you know how, please send me patches.
+## Configuration ##
 
-That's all. Enjoy it!
+```
+slogan: Yet another bootstrap theme.
+
+menu:
+  - title: Archives
+    url: archives
+    intro: All the articles.
+    icon: fa fa-archive
+  - title: Categories
+    url: categories
+    intro: All the categories.
+    icon: fa fa-folder
+  - title: Tags
+    url: tags
+    intro: All the tags.
+    icon: fa fa-tags
+  - title: About
+    url: about
+    intro: About me.
+    icon: fa fa-user
+
+links:
+  - title: My Github
+    url: http://www.github.com/wzpan
+    intro: My Github account.
+    icon: fa fa-github
+  - title: My LinkedIn
+    url: http://www.linkedin.com/pub/weizhou-pan/5b/8a0/161
+    intro: My Linkin account.
+    icon: fa fa-linkedin
+
+widgets:
+- search
+- category
+- tagcloud
+- recent_posts
+- links
+
+rss: /atom.xml
+favicon: favicon.png
+fancybox: true
+google_analytics: UA-49061001-1
+```
+
+* **slogan** - slogan display at the index page
+* **menu** - Navigation menu
+* **links** - reference links at the links widget
+* **widgets** - Widgets displaying in sidebar
+* **rss** - RSS link
+* **fancybox** - Enable [Fancybox](http://fancyapps.com/fancybox/)
+* **google_analytics** - Google Analytics ID
 
 ## License ##
 
@@ -61,5 +118,5 @@ This theme is provided under [MIT](http://opensource.org/licenses/MIT).
 
 ## Credits ##
 
-* The theme is based on [Twitter-Bootstrap 2.3.2](getbootstrap.com/2.3.2/);
+* The theme is based on [Twitter-Bootstrap 3.1.1](getbootstrap.com/3.1.1/);
 * `Freemind` is named after [Pluskid's blog](http://freemind.pluskid.org/). This theme is greatly inspired by his blog layouts and stylesheets.

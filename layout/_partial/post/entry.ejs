@@ -1,20 +1,22 @@
 <div class="entry">
-	<ul class="thumbnails">
-    <% if (item.feature ) { %>   	  
-   	  <li class="span8">
+  <div class="row">
+  <% if (item.feature ) { %>
+	<div class="col-md-8">
+	<% } else { %>
+	<div class="col-md-12">
+	  <% } %>
+	<% if (item.excerpt && index) { %>
+	  <%- item.excerpt %>
+	<% } else { %>
+	  <%- item.content %>
 	<% } %>
-	
-    <% if (item.excerpt && index){ %>
-      <%- item.excerpt %>	  
-   <% } else { %>
-   	  <%- item.content %>
-   <% } %>   
-   <% if (item.feature ) { %>
-      </li>
-      <li class="span4">
-      <div class="thumbnail"><a href="<%- config.root %><%= item.path %>"><img src="<%= config.root %><%= item.feature %>" alt="<%= item.title %>"  class="nofancybox"></a></div>
-	  </li>
-   <% } %>
-   </ul>
-   <a href="<%- config.root %><%- item.path %>#more" class="btn more"><%= __('read_more') %></a>
-</div>    
+	</div>
+	<% if (item.feature ) { %>
+	<div class="col-md-4">
+	  <div class="thumbnail"><a href="<%- config.root %><%= item.path %>"><img src="<%= config.root %><%= item.feature %>" alt="<%= item.title %>"  class="nofancybox"></a></div>
+	</div>
+	<% } %>
+  
+</div>
+	<button type="button" href="<%- config.root %><%- item.path %>#more" class="btn btn-default more"><%= __('read_more') %></button>
+</div>

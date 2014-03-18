@@ -1,39 +1,43 @@
-<div class="span3">
+<div class="col-md-3"> 
 
-	<!-- ToC -->
-	<ul class="tag_box">
-	  <% if (item.date){ %>
-      <li><i class="fa fa-clock-o"></i></li>
-      <li><%= item.date.format(config.date_format) %></li>
-	  <% } %>
-    </ul>
-    <p>
-    <ul class="tag_box">
-	  <% if (item.categories) { %>
+	<!-- date -->
+	<% if (item.date) { %>
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	<%= item.date.format(config.date_format) %> 
+	</div>
+	<% } %>
+
+	<!-- categories -->
+    <% if (item.categories  && item.categories.length ) { %>
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
+    <ul id="categorys" class="tag_box list-unstyled collapse in">
         <%- partial('category') %>
-	  <% } %>
     </ul>
-    </p>
+	</div>
+	<% } %>
 
-    <p>
-    <ul class="tag_box">
-	  <% if (item.tags) { %>
+	<!-- tags -->
+	<% if(item.tags && item.tags.length ){ %>
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
 	  <%- partial('tag') %>
-	  <% } %>
     </ul>
-    </p>
+	</div>
+	<% } %>	
 
-	<p>
+	<!-- toc -->
+	<div class="meta-widget">
 	<% if(item.toc){ %>
-	   <i class="fa fa-bars"></i>
-	   <div class="toc">
+	   <a data-toggle="collapse" data-target="#toc"><i class="fa fa-bars"></i></a>
+	   <div id="toc" class="toc collapse in">
 			<%- toc(item.content, {class: "toc-article", list_number:false}) %>
 		</div>
 	<% } %>
-
-	</p>
+	</div>
 	
     <hr>
 	
-	
-</div><!-- span3 -->
+</div><!-- col-md-3 -->

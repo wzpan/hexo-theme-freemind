@@ -31,10 +31,11 @@ links:
 widgets:
 - search
 - category
-- tagbox
+- tagcloud
 - recent_posts  
 - links
 
-favicon: favicon.ico
-
+rss: /atom.xml
 fancybox: true
+favicon: favicon.png
+google_analytics: UA-49061001-1

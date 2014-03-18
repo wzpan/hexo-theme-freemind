@@ -1,34 +1,37 @@
 <%- partial('post/title', {item: item, index: false}) %>
 
-<div class="row-fluid <% if (post) { %>post<% } else { %>page<% } %>">
-	<!-- span -->
+<div class="row <% if (post) { %>post<% } else { %>page<% } %>">
+	<!-- cols -->
 	<% if (post) { %>
-	<div class="span9">
+	<div class="col-md-9">
 	<% } else { %>
-	<div class="span12">
+	<div class="col-md-12">
 	<% } %>
 
-	<!-- content -->
 	<% if (item.description) { %>
-		<div class="alert alert-success">
-			<i class="fa fa-info-circle"></i> <%= item.description %>
+		 <div class="alert alert-success description">
+			<i class="fa fa-info-circle"></i> <%= item.description %>			
 		</div> <!-- alert -->
-	<% } %>
+	<% } %>		
 
 	<!-- content -->
-	<div class="mypost">
-	  <%- item.content %>	  
+	<div class="mypost">		
+	    <%- item.content %>	  
 	</div>
 
-	<!-- pagination -->
-	  <%- partial('post/pagination', {page: item}) %>
+	<div>
+  	<center>
+	<%- partial('post/pagination', {page: item}) %>
+	    </center>
+	</div>
 	
 	<!-- comment -->
 	<%- partial('post/comment', {page: item}) %>
-		
-	</div> <!-- span9/span12 -->
+	
+	</div> <!-- col-md-9/col-md-12 -->
+	
 	<% if (post) { %>
 		<%- partial('post/meta', {item: item}) %>
 	<% } %>
 
-</div><!-- row-fluid post-full -->
+</div><!-- row -->
