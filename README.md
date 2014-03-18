@@ -116,6 +116,10 @@ google_analytics:
 
 This theme is provided under [MIT](http://opensource.org/licenses/MIT).
 
+## People Using Freemind ##
+
+see [Examples](https://github.com/wzpan/freemind/wiki/Examples)
+
 ## Credits ##
 
 * The theme is based on [Twitter-Bootstrap 3.1.1](getbootstrap.com/3.1.1/);
