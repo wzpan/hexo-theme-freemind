@@ -98,10 +98,10 @@ widgets:
 - recent_posts
 - links
 
-rss: /atom.xml
+rss: atom.xml
 favicon: favicon.png
 fancybox: true
-google_analytics: UA-49061001-1
+google_analytics: 
 ```
 
 * **slogan** - slogan display at the index page
