@@ -19,6 +19,9 @@ menu:
     icon: fa fa-user
 
 links:
+  - title: Freemind
+    url: http://www.github.com/wzpan/freemind
+    intro: Freemind's github repository.
   - title: My Github
     url: http://www.github.com/wzpan
     intro: My Github account.
