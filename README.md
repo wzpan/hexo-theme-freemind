@@ -54,7 +54,7 @@ Modify `theme` setting in your `_config.yml` to `freemind`.
 ## Update ##
 
 ``` sh
-$ cd themes/landscape
+$ cd themes/freemind
 $ git pull
 ```
 
