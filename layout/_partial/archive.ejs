@@ -26,10 +26,18 @@
 
 	  <% if (pagination == 2){ %>
 	  <!-- display as entry -->
+	  <div class="mypage">
 	  <% page.posts.each(function(item){ %>
 	  <%- partial('post/title', {item: item, index: true}) %>
-	  <%- partial('post/entry', {item: item, index: true}) %>
+	  <%- partial('post/entry', {item: item, index: true}) %>	  
 	  <% }); %>
+	  </div>
+	  <div>
+	  <center>
+	  <%- partial('index_pagination') %>
+	  </center>
+	  </div>
+	  
 	  <% } else { %>
 	  <!-- display as list -->
 	  <div class="archive">

@@ -7,22 +7,24 @@
 	<% } %>
 
 		<%- partial('post/slogan') %>
-        
+
+		<div class="mypage">
+		
 		<!-- title and entry -->
 		<% page.posts.each(function(item){ %>
 			<%- partial('post/title', {item: item, index: index}) %>
 			<%- partial('post/entry', {item: item, index: index}) %>
 		<% }); %>
 
-		<hr>
-		
+		</div>
+
+		<!-- pagination -->
 		<div>
   		<center>
 		<%- partial('index_pagination') %>
-    	
   		</center>
 		</div>
-		<!-- pagination -->
+
 		
 		
 	</div> <!-- col-md-9 -->
