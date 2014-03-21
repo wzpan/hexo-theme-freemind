@@ -20,8 +20,9 @@ menu:
 
 links:
   - title: Freemind
-    url: http://www.github.com/wzpan/freemind
-    intro: Freemind's github repository.
+    url: https://github.com/wzpan/freemind/
+    intro: Freemind's Github repository.
+    icon: fa fa-github
   - title: My Github
     url: http://www.github.com/wzpan
     intro: My Github account.
