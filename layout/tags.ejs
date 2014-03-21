@@ -23,8 +23,8 @@
 <div class="archive">
 	<% site.tags.sort('name').each(function(item){ %>
 
-	   <h4 class="archive-ul show" data-toggle="collapse" data-target="#<%= item.name %>"> <%= item.name %> <b class="caret"></b></h4>
-	   <ul id="<%= item.name %>" class="collapse in">
+	<h4 class="archive-ul show" data-toggle="collapse" id="<%= item.name %>" data-target="#modal-<%= item.name %>"> <%= item.name %> <b class="caret"></b></h4>
+	   <ul id="modal-<%= item.name %>" class="collapse in">
 
 	   <% site.posts.sort('date', -1).forEach(function(it){ %>
 		   <% if (it.tags._index.indexOf(item._id) > -1){ %>
