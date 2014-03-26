@@ -22,7 +22,7 @@ Yet another [bootstrap](http://getbootstrap.com) based theme for [Hexo](http://z
 1) install theme:
 
 ``` sh
-$ git clone https://github.com/wzpan/freemind.git theme/freemind
+$ git clone https://github.com/wzpan/hexo-theme-freemind.git theme/freemind
 ```
 
 2) install [hexo-tag-bootstrap](https://github.com/wzpan/hexo-tag-bootstrap):
