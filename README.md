@@ -3,9 +3,9 @@ Freemind
 
 Yet another [bootstrap](http://getbootstrap.com) based theme for [Hexo](http://zespia.tw/hexo/). Freemind aims at fully taking advantages of Bootstrap.
 
-* [Demo](http://hahack.tk/freemind/)
-* [Q&A](http://hahack.tk/freemind/2014/03/16/qna/)
-* [Tag Plugins](http://hahack.tk/freemind/2014/03/16/tag-plugins/)
+* [Demo](http://hahack.tk/hexo-theme-freemind/)
+* [Q&A](http://hahack.tk/hexo-theme-freemind/2014/03/16/qna/)
+* [Tag Plugins](http://hahack.tk/hexo-theme-freemind/2014/03/16/tag-plugins/)
 
 ## Features ##
 
