@@ -10,7 +10,7 @@
 
 	<% if (item.description) { %>
 		 <div class="alert alert-success description">
-			<i class="fa fa-info-circle"></i> <%= item.description %>			
+			<i class="fa fa-info-circle"></i> <%- markdown(item.description) %>			
 		</div> <!-- alert -->
 	<% } %>		
 
