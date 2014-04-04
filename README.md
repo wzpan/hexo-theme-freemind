@@ -144,5 +144,5 @@ see [Examples](https://github.com/wzpan/freemind/wiki/Examples)
 
 ## Credits ##
 
-* The theme is based on [Twitter-Bootstrap 3.1.1](getbootstrap.com/3.1.1/);
-* `Freemind` is named after [Pluskid's blog](http://freemind.pluskid.org/). This theme is greatly inspired by his blog layouts and stylesheets.
+* The theme is built based on [Twitter-Bootstrap 3.1.1](getbootstrap.com/3.1.1/);
+* The beautiful icons are from [Font Awesome](http://fortawesome.github.io/Font-Awesome/icons/).
