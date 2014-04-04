@@ -112,9 +112,30 @@ google_analytics:
 * **fancybox** - Enable [Fancybox](http://fancyapps.com/fancybox/)
 * **google_analytics** - Google Analytics ID
 
+## Front-Matter ##
+
+There are some new front-matter settings in Freemind that you can use to decorate your articles.
+
+* **description** - a short description about the articles that will be display at the top of the post
+* **feature** - sets a feature image that will be show at the index page
+* **toc** - renders a table of contents
+
+For example:
+
+```
+title: Tag Plugins
+date: 2014-03-16 10:17:16
+tags: plugins
+categories: Docs
+description: Introduce tag plugins in freemind.
+feature: images/tag-plugins/plugins.jpg
+toc: true
+---
+```
+
 ## License ##
 
-This theme is provided under [MIT](http://opensource.org/licenses/MIT).
+This theme is provided under [MIT License](http://opensource.org/licenses/MIT).
 
 ## People Using Freemind ##
 
