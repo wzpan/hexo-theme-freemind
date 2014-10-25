@@ -102,7 +102,8 @@ widgets:
 rss: atom.xml
 favicon: favicon.png
 fancybox: true
-google_analytics: 
+duoshuo_shortname:
+google_analytics:
 ```
 
 * **slogan** - slogan display at the index page
@@ -111,6 +112,7 @@ google_analytics:
 * **widgets** - Widgets displaying in sidebar
 * **rss** - RSS link
 * **fancybox** - Enable [Fancybox](http://fancyapps.com/fancybox/)
+* **duoshuo_shortname** - DuoShuo ID, if you prefer to use duoshuo instead of Disqus
 * **google_analytics** - Google Analytics ID
 
 ## Front-Matter ##
