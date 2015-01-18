@@ -3,7 +3,7 @@
 /* highlight */
 
 pre, .highlight, .gist {  
-  background: #333;
+  background: #333 !important;
   margin: 0.5em 0;
   padding: 1em 2%;
   overflow: auto;

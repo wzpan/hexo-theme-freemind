@@ -24,22 +24,6 @@
 	<div class="col-md-12">
 	  <% } %>
 
-	  <% if (pagination == 2){ %>
-	  <!-- display as entry -->
-	  <div class="mypage">
-	  <% page.posts.each(function(item){ %>
-	  <%- partial('post/title', {item: item, index: true}) %>
-	  <%- partial('post/entry', {item: item, index: true}) %>	  
-	  <% }); %>
-	  </div>
-	  <div>
-	  <center>
-	  <%- partial('index_pagination') %>
-	  </center>
-	  </div>
-	  
-	  <% } else { %>
-	  <!-- display as list -->
 	  <div class="archive">
 		<% page.posts.each(function(item){ %>		
 		<%
@@ -55,22 +39,21 @@
 			<ul id="<%= year %>" class="collapse in">
 			<% last_year = year; %>
 		<% } %>
-<li class="listing-item">
-  <span class="date_class"> <%= item.date.format("YYYY-MM-DD") %> </span> &raquo;
-  <% if (item.link){ %>
-  <% if (item.title){ %>
-  <span class="title link"><a href="<%- item.link %>" target="_blank" <% if (item.description) { %> title="<%= item.description %>" <% } %>><%= item.title %></a></span>
-  <% } else { %>
-  <span class="title link"><a href="<%- item.link %>" target="_blank" <% if (item.description) { %> title="<%= item.description %>" <% } %>><%= item.link %></a></span>
-  <% } %>
-  <% } else { %>
-  <span class="title"><a href="<%- config.root %><%- item.path %>" <% if (item.description) { %> title="<%= item.description %>" <% } %>><%= item.title %></a></span>
-  <% } %>
-</li>			
-<% }); %>
-</ul>
-</div>
-<% } %>
+		<li class="listing-item">
+		<span class="date_class"> <%= item.date.format("YYYY-MM-DD") %> </span> &raquo;
+		<% if (item.link){ %>
+		<% if (item.title){ %>
+		<span class="title link"><a href="<%- item.link %>" target="_blank" <% if (item.description) { %> title="<%= item.description %>" <% } %>><%= item.title %></a></span>
+		<% } else { %>
+		<span class="title link"><a href="<%- item.link %>" target="_blank" <% if (item.description) { %> title="<%= item.description %>" <% } %>><%= item.link %></a></span>
+		<% } %>
+		<% } else { %>
+		<span class="title"><a href="<%- config.root %><%- item.path %>" <% if (item.description) { %> title="<%= item.description %>" <% } %>><%= item.title %></a></span>
+		<% } %>
+		</li>			
+		<% }); %>
+		</ul>
+		</div>
 
 </div> <!-- col-md-9/col-md-12 -->
 
