@@ -36,11 +36,12 @@ widgets:
 - search
 - category
 - tagcloud
-- recent_posts  
+- recent_posts
+- weibo
 - links
 
 rss: 
 fancybox: true
 favicon: favicon.png
 duoshuo_shortname:
-google_analytics:
+google_analytics: 
