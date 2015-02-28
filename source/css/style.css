@@ -406,9 +406,14 @@ h4 {
   color: black;
 }
 
-.page h3.title span.date {
-  position:absolute;
-  right:5px;
+.page h3.title div.article-title {
+  width:80%;
+}
+
+.page h3.title div.date {
+  /* position:absolute; */
+  /* right:5px; */
+  float: right;
   font-size:0.7em;
   color: #777;
 }

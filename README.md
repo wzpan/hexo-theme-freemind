@@ -46,6 +46,14 @@ layout: categories
 
 Tags and About pages are created in a similar way, except that the layouts are `tags` and `page` respectively.
 
+Alternatively you can create About page using the following command:
+
+``` sh
+$ hexo new page about
+```
+
+Note that only About page can be created in that way.
+
 > Some people may argue that I should embed these pages in the theme. This really makes sense, but currently I don't have time to do so. If you know how, **welcome to send me patches**.
 
 ## Enable ##
