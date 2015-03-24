@@ -27,8 +27,12 @@
 	   <ul id="modal-<%= item.name %>" class="collapse in">
 	   <% console.log(item.name) %>
 	   <% site.posts.sort('date', -1).forEach(function(it){ %>
-	   	  <% if (it.tags.length >= 1 && it.tags.data[0]._id == item._id){ %>
-	   	   	 <li class="listing-item"><a href="<%= config.root %><%= it.path %>" <% if (it.description) { %> title="<%= it.description %>" <% } %>><%= it.title %></a></li>
+	      <% if (it.tags.length >= 1) { %>
+		      <% it.tags.data.forEach(function(data){ %>
+			    <% if (data._id == item._id) { %>
+   	   	   	       <li class="listing-item"><a href="<%= config.root %><%= it.path %>" <% if (it.description) { %> title="<%= it.description %>" <% } %>><%= it.title %></a></li>
+				<% } %>
+		      <% }); %>
 		  <% } %>
 	   <% }); %>
 	   
