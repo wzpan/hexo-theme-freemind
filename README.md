@@ -1,13 +1,17 @@
 Hexo-Theme-Freemind
 ===
 
-Yet another [bootstrap](http://getbootstrap.com) based theme for [Hexo](http://zespia.tw/hexo/). Freemind aims at fully taking advantages of Bootstrap.
+Freemind aims at fully taking advantages of Bootstrap.
 
 * [Demo](http://wzpan.github.io/hexo-theme-freemind/)
 * [Q&A](http://wzpan.github.io/hexo-theme-freemind/2014/03/16/qna/)
 * [Tag Plugins](http://wzpan.github.io/hexo-theme-freemind/2014/03/16/tag-plugins/)
 * [Readme in Chinese](http://hahack.com/codes/hexo-theme-freemind/)
 
+## Requirements ##
+
+* Hexo >= 3.0
+* [hexo-tag-bootstrap](https://github.com/wzpan/hexo-tag-bootstrap) >= 0.8 (optional)
 ## Features ##
 
 * **Bootstrap** - get the power of Twitter Bootstrap with minimal hassle;
