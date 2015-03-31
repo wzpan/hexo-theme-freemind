@@ -25,7 +25,6 @@
 
 	<h4 class="archive-ul show" data-toggle="collapse" id="<%= item.name %>" data-target="#modal-<%= item.name %>"> <%= item.name %> <b class="caret"></b></h4>
 	   <ul id="modal-<%= item.name %>" class="collapse in">
-	   <% console.log(item.name) %>
 	   <% site.posts.sort('date', -1).forEach(function(it){ %>
 	      <% if (it.tags.length >= 1) { %>
 		      <% it.tags.data.forEach(function(data){ %>
