@@ -100,7 +100,7 @@ links:
     intro: My Github account.
     icon: fa fa-github
   - title: My LinkedIn
-    url: http://www.linkedin.com/pub/weizhou-pan/5b/8a0/161
+    url: http://www.linkedin.com/in/hahack
     intro: My Linkin account.
     icon: fa fa-linkedin
 
@@ -115,7 +115,14 @@ rss: atom.xml
 favicon: favicon.png
 fancybox: true
 duoshuo_shortname:
+
+# Analytics
 google_analytics:
+  enable: false
+  siteid:
+baidu_tongji:
+  enable: false
+  siteid:
 ```
 
 * **slogan** - slogan display at the index page
@@ -125,7 +132,7 @@ google_analytics:
 * **rss** - RSS link
 * **fancybox** - Enable [Fancybox](http://fancyapps.com/fancybox/)
 * **duoshuo_shortname** - DuoShuo ID, if you prefer to use duoshuo instead of Disqus
-* **google_analytics** - Google Analytics ID
+* **analytics** - Analytics ID. Supports both Google Analytics and Baidu Tongji.
 
 ## Front-Matter ##
 
@@ -154,7 +161,7 @@ This theme is provided under [MIT License](http://opensource.org/licenses/MIT).
 
 ## People Using Freemind ##
 
-see [Examples](https://github.com/wzpan/freemind/wiki/Examples)
+see [Examples](https://github.com/wzpan/freemind/wiki/Examples).
 
 ## Credits ##
 
