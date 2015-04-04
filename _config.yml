@@ -43,4 +43,11 @@ rss:
 fancybox: true
 favicon: favicon.png
 duoshuo_shortname:
+
+# Analytics
 google_analytics:
+  enable: false
+  siteid:
+baidu_tongji:
+  enable: false
+  siteid:
