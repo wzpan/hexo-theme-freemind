@@ -1,13 +1,17 @@
 Hexo-Theme-Freemind
 ===
 
-Yet another [bootstrap](http://getbootstrap.com) based theme for [Hexo](http://zespia.tw/hexo/). Freemind aims at fully taking advantages of Bootstrap.
+Freemind aims at fully taking advantages of Bootstrap.
 
-* [Demo](http://hahack.tk/hexo-theme-freemind/)
-* [Q&A](http://hahack.tk/hexo-theme-freemind/2014/03/16/qna/)
-* [Tag Plugins](http://hahack.tk/hexo-theme-freemind/2014/03/16/tag-plugins/)
+* [Demo](http://wzpan.github.io/hexo-theme-freemind/)
+* [Q&A](http://wzpan.github.io/hexo-theme-freemind/2014/03/16/qna/)
+* [Tag Plugins](http://wzpan.github.io/hexo-theme-freemind/2014/03/16/tag-plugins/)
 * [Readme in Chinese](http://hahack.com/codes/hexo-theme-freemind/)
 
+## Requirements ##
+
+* Hexo >= 3.0
+* [hexo-tag-bootstrap](https://github.com/wzpan/hexo-tag-bootstrap) >= 0.0.8 (optional)
 ## Features ##
 
 * **Bootstrap** - get the power of Twitter Bootstrap with minimal hassle;
@@ -45,6 +49,14 @@ layout: categories
 ```
 
 Tags and About pages are created in a similar way, except that the layouts are `tags` and `page` respectively.
+
+Alternatively you can create About page using the following command:
+
+``` sh
+$ hexo new page about
+```
+
+Note that only About page can be created in that way.
 
 > Some people may argue that I should embed these pages in the theme. This really makes sense, but currently I don't have time to do so. If you know how, **welcome to send me patches**.
 
@@ -88,7 +100,7 @@ links:
     intro: My Github account.
     icon: fa fa-github
   - title: My LinkedIn
-    url: http://www.linkedin.com/pub/weizhou-pan/5b/8a0/161
+    url: http://www.linkedin.com/in/hahack
     intro: My Linkin account.
     icon: fa fa-linkedin
 
@@ -103,7 +115,14 @@ rss: atom.xml
 favicon: favicon.png
 fancybox: true
 duoshuo_shortname:
+
+# Analytics
 google_analytics:
+  enable: false
+  siteid:
+baidu_tongji:
+  enable: false
+  siteid:
 ```
 
 * **slogan** - slogan display at the index page
@@ -113,7 +132,7 @@ google_analytics:
 * **rss** - RSS link
 * **fancybox** - Enable [Fancybox](http://fancyapps.com/fancybox/)
 * **duoshuo_shortname** - DuoShuo ID, if you prefer to use duoshuo instead of Disqus
-* **google_analytics** - Google Analytics ID
+* **analytics** - Analytics ID. Supports both Google Analytics and Baidu Tongji.
 
 ## Front-Matter ##
 
@@ -142,7 +161,7 @@ This theme is provided under [MIT License](http://opensource.org/licenses/MIT).
 
 ## People Using Freemind ##
 
-see [Examples](https://github.com/wzpan/freemind/wiki/Examples)
+see [Examples](https://github.com/wzpan/freemind/wiki/Examples).
 
 ## Credits ##
 

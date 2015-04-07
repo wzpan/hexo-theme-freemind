@@ -6,10 +6,10 @@
 	<% } %>
 <% } else { %>
 	<% if (index) { %>
-	<!-- display as entry -->
+	<!-- display as entry -->	
 		<h3 class="title">
-			<a href="<%- config.root %><%- item.path %>" <% if(item.description) { %>title="<%= item.description %>"<% } %>><%= item.title %></a>
-			<span class="date"> <%= item.date.format(config.date_format) %> </span>
+			<div class="date"> <%= item.date.format(config.date_format) %> </div>
+			<div class="article-title"><a href="<%- config.root %><%- item.path %>" <% if(item.description) { %>title="<%= item.description %>"<% } %>><%= item.title %></a></div>						
 		</h3>
 	<% } else { %>
 		<div class="page-header">		

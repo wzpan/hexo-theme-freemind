@@ -28,7 +28,7 @@ links:
     intro: "My Github account."
     icon: "fa fa-github"
   - title: "My LinkedIn"
-    url: http://www.linkedin.com/pub/weizhou-pan/5b/8a0/161
+    url: http://www.linkedin.com/in/hahack
     intro: "My Linkin account."
     icon: "fa fa-linkedin"
 
@@ -43,4 +43,11 @@ rss:
 fancybox: true
 favicon: favicon.png
 duoshuo_shortname:
+
+# Analytics
 google_analytics:
+  enable: false
+  siteid:
+baidu_tongji:
+  enable: false
+  siteid:

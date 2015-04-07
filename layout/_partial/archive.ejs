@@ -1,10 +1,20 @@
 <%
    var title = '';
-   if (page.category) title = page.category;
-   if (page.tag) title = page.tag;
+   var posts = site.posts;
+   if (page.category) {
+   	  title = page.category;
+	  posts = page.posts;
+   }
+   if (page.tag) {
+      title = page.tag;
+	  posts = page.posts;
+   }
    if (page.archive){
    	  if (page.year) title = page.year + (page.month ? '/' + page.month : '');
-   	  else title = __('archive_a');
+   	  else {
+	      title = __('archive_a');
+		  posts = site.posts;
+	  }
    }
    var year, month;
    var last_year = 1970;
@@ -25,11 +35,11 @@
 	  <% } %>
 
 	  <div class="archive">
-		<% page.posts.each(function(item){ %>		
+		<% posts.sort('date', -1).each(function(item){ %>
 		<%
 		   year = item.date.toDate().getFullYear();
-		   month = item.date.toDate().getMonth();
-		   %>
+		   month = item.date.toDate().getMonth();	   
+		%>
 		<% if (year != last_year){ %>
 			<% if (!is_first_year) { %>
 			</ul>
@@ -42,13 +52,13 @@
 		<li class="listing-item">
 		<span class="date_class"> <%= item.date.format("YYYY-MM-DD") %> </span> &raquo;
 		<% if (item.link){ %>
-		<% if (item.title){ %>
-		<span class="title link"><a href="<%- item.link %>" target="_blank" <% if (item.description) { %> title="<%= item.description %>" <% } %>><%= item.title %></a></span>
+		   <% if (item.title){ %>
+		   	  <span class="title link"><a href="<%- item.link %>" target="_blank" <% if (item.description) { %> title="<%= item.description %>" <% } %>><%= item.title %></a></span>
+		   <% } else { %>
+		   	  <span class="title link"><a href="<%- item.link %>" target="_blank" <% if (item.description) { %> title="<%= item.description %>" <% } %>><%= item.link %></a></span>
+		   <% } %>
 		<% } else { %>
-		<span class="title link"><a href="<%- item.link %>" target="_blank" <% if (item.description) { %> title="<%= item.description %>" <% } %>><%= item.link %></a></span>
-		<% } %>
-		<% } else { %>
-		<span class="title"><a href="<%- config.root %><%- item.path %>" <% if (item.description) { %> title="<%= item.description %>" <% } %>><%= item.title %></a></span>
+		   <span class="title"><a href="<%- config.root %><%- item.path %>" <% if (item.description) { %> title="<%= item.description %>" <% } %>><%= item.title %></a></span>
 		<% } %>
 		</li>			
 		<% }); %>
