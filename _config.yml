@@ -51,3 +51,6 @@ google_analytics:
 baidu_tongji:
   enable: false
   siteid:
+
+# search
+swiftype_key: ZP2ZSuHgipSZfRyU8uTR
