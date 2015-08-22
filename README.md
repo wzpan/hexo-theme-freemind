@@ -123,7 +123,7 @@ baidu_tongji:
   siteid:
 
 # Search
-swifttype_key: ZP2ZSuHgipSZfRyU8uTR
+swiftype_key: ZP2ZSuHgipSZfRyU8uTR
 ```
 
 * **slogan** - slogan display at the index page
