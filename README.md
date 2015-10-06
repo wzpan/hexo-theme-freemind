@@ -58,8 +58,6 @@ $ hexo new page about
 
 Note that only About page can be created in that way.
 
-> Some people may argue that I should embed these pages in the theme. This really makes sense, but currently I don't have time to do so. If you know how, **welcome to send me patches**.
-
 ## Enable ##
 
 Modify `theme` setting in your `_config.yml` to `freemind`.
@@ -116,13 +114,16 @@ favicon: favicon.png
 fancybox: true
 duoshuo_shortname:
 
-# Analytics
+# analytics
 google_analytics:
   enable: false
   siteid:
 baidu_tongji:
   enable: false
   siteid:
+
+# Search
+swiftype_key: ZP2ZSuHgipSZfRyU8uTR
 ```
 
 * **slogan** - slogan display at the index page
@@ -133,6 +134,7 @@ baidu_tongji:
 * **fancybox** - Enable [Fancybox](http://fancyapps.com/fancybox/)
 * **duoshuo_shortname** - DuoShuo ID, if you prefer to use duoshuo instead of Disqus
 * **analytics** - Analytics ID. Supports both Google Analytics and Baidu Tongji.
+* **search** - Swifttype key to enable local searching.
 
 ## Front-Matter ##
 
