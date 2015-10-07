@@ -28,6 +28,7 @@ body {
   position: relative;
   padding-top: 40px;
   background-color: #fff;
+  background-image: url(../img/grid-18px-masked.png);
   background-repeat: repeat-x;
   background-position: 0 40px;
   padding-bottom: 70px;
