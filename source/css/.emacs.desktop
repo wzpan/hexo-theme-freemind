@@ -1,0 +1,62 @@
+;; -*- mode: emacs-lisp; coding: emacs-mule; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Wed Oct  7 18:21:16 2015
+;; Desktop file format version 206
+;; Emacs version 24.3.1
+
+;; Global section:
+(setq desktop-missing-file-warning nil)
+(setq tags-file-name nil)
+(setq tags-table-list nil)
+(setq search-ring '("$$" "npm install" "hexo" "cnpm" "home" ".zsh" "npm" "package" "blog" "--save" "npm instsal" "mark" "config" "markd"))
+(setq regexp-search-ring nil)
+(setq register-alist nil)
+(setq file-name-history '("~/Documents/projects/hexo-theme-freemind/themes/freemind/source/css/" "~/Documents/projects/hexo-theme-freemind/themes/freemind/source/css/responsive.css" "~/Documents/projects/hexo-theme-freemind/themes/freemind/source/js/main.js" "~/.emacs.d/savefile/bookmarks" "/home/ehome/bin/hexo_freemind" "/home/ehome/Documents/projects/dockerfile/Dockerfile" "~/Documents/blog/package.json" "~/Documents/projects/dockerfile/Dockerfile" "/home/ehome/Documents/projects/dockerfile" "/home/ehome/Documents/projects/dockerfile/hexo3" "~/Documents/projects/hexo-theme-freemind" "~/Documents/projects/hexo-theme-freemind/package.json" "~/Documents/projects/hexo-theme-freemind/node_modules/" "~/Documents/projects/hexo-theme-freemind/node_modules/hexo-renderer-marked/lib/renderer.js" "~/Documents/projects/hexo-theme-freemind/_config.yml" "/home/ehome/Documents/projects/hexo-theme-freemind/themes/freemind/.git/MERGE_MSG" "/home/ehome/Documents/blog/themes/bootstrap/source/css/bootstrap-responsive.css" "/home/ehome/Documents/projects/hexo-theme-freemind/themes/freemind/source/css/bootstrap.min.css" "~/Documents/projects/hexo-theme-freemind/themes/freemind/layout/_partial/head.ejs" "~/Documents/blog/themes/bootstrap/source/css/responsive.css" "~/Documents/projects/hexo-theme-freemind/themes/freemind/source/css/responsive.css" "~/Documents/projects/hexo-theme-freemind/themes/freemind/source/css/bootstrap-responsive.css" "~/Documents/projects/hexo-theme-freemind/themes/freemind/source/css/" "~/Documents/projects/hexo-theme-freemind/themes/freemind/source/css/style.css" "~/Documents/blog/themes/bootstrap/source/css/style.css" "~/Documents/blog/themes/bootstrap/layout/_partial/post/entry.ejs"))
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 206
+  "/home/ehome/Documents/projects/hexo-theme-freemind/themes/freemind/source/css/responsive.css"
+  "responsive.css"
+  'css-mode
+  '(prelude-mode global-auto-revert-mode volatile-highlights-mode projectile-mode anzu-mode undo-tree-mode flx-ido-mode yas-minor-mode rainbow-mode)
+  423
+  '(802 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix) (overwrite-mode)))
+
+(desktop-create-buffer 206
+  "/home/ehome/Documents/projects/hexo-theme-freemind/themes/freemind/source/js/main.js"
+  "main.js"
+  'js-mode
+  '(prelude-mode global-auto-revert-mode smartparens-mode volatile-highlights-mode flyspell-mode projectile-mode anzu-mode highlight-symbol-mode whitespace-mode undo-tree-mode flx-ido-mode yas-minor-mode)
+  874
+  '(964 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  nil
+  "css"
+  'dired-mode
+  '(prelude-mode global-auto-revert-mode volatile-highlights-mode projectile-mode anzu-mode flx-ido-mode yas-minor-mode)
+  603
+  '(nil nil)
+  t
+  '("/home/ehome/Documents/projects/hexo-theme-freemind/themes/freemind/source/css/")
+  nil)
+
+(desktop-create-buffer 206
+  nil
+  "blog"
+  'dired-mode
+  '(prelude-mode global-auto-revert-mode volatile-highlights-mode projectile-mode anzu-mode flx-ido-mode yas-minor-mode)
+  846
+  '(nil nil)
+  t
+  '("/home/ehome/Documents/blog/")
+  nil)
+
