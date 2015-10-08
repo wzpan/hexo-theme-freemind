@@ -176,6 +176,30 @@ li i {
   border-bottom: 1px solid #e0e0e0; 
 }
 
+#local-search-result {
+  scroll:auto;
+  overflow:auto;
+  max-height:3in;
+  background-color:#fef;
+}
+
+ul.search-result-list {
+  padding-left: 10px;
+}
+
+a.search-result-title {
+  font-weight: bold;
+}
+
+p.search-result {
+  color=#555;
+}
+
+em.search-keyword {
+  border-bottom: 1px dashed #4088b8;
+  font-weight: bold;
+}
+
 .tagcloud .entry{
   width: 100%;  
 }

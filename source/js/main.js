@@ -48,7 +48,7 @@ replaceMeta = function(){
 		}
 		if ($("#top_search #site_search").length>0) {
 			$("#site_search").prependTo("#sidebar");
-			$("#site_search #st-search-input").css("width", "80%");
+			$("#site_search #st-search-input").css("width", "85%");
 		}
 	}
 }
