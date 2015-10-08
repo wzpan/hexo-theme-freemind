@@ -88,7 +88,6 @@ var searchFunc = function(path, search_id, content_id) {
                 });
                 str += "</ul>";
                 $resultContent.innerHTML = str;
-                $(".search-result").colorCycle();
             });
         }
     });

@@ -21,6 +21,7 @@ Freemind aims at fully taking advantages of Bootstrap.
   - label - a label with text and specified color;
   - badge - a badge with text;
   - alert - alert messages with text and specified color; 
+* **Local Search Engine** - a build-in local search engine, with the help of [hexo-generator-search](https://github.com/paichyperiondev/hexo-generator-search).
 
 ## Install ##
 
@@ -30,13 +31,19 @@ Freemind aims at fully taking advantages of Bootstrap.
 $ git clone https://github.com/wzpan/hexo-theme-freemind.git themes/freemind
 ```
 
-2) install [hexo-tag-bootstrap](https://github.com/wzpan/hexo-tag-bootstrap):
+2) install [hexo-tag-bootstrap](https://github.com/wzpan/hexo-tag-bootstrap) (*optional*):
 
 ``` sh
 $ npm install hexo-tag-bootstrap --save
 ```
 
-3) Create pages
+3) install [hexo-generator-search](https://github.com/paichyperiondev/hexo-generator-search) (*optional*):
+
+``` sh
+$ npm install hexo-generator-search --save
+```
+
+4) Create pages
 
 Freemind offers you the customized Categories, Tags and About pages. But you need to manually create these page at your 'source' folder.
 
@@ -134,7 +141,14 @@ swiftype_key: ZP2ZSuHgipSZfRyU8uTR
 * **fancybox** - Enable [Fancybox](http://fancyapps.com/fancybox/)
 * **duoshuo_shortname** - DuoShuo ID, if you prefer to use duoshuo instead of Disqus
 * **analytics** - Analytics ID. Supports both Google Analytics and Baidu Tongji.
-* **search** - Swifttype key to enable local searching.
+* **swiftype_key** - Swifttype key to enable local searching. Comment this line if you want to use local search engine.
+
+> If you prefer to use disqus, the setting of disqus should be placed at your **root** `_config.yml`:
+
+```
+# Disqus
+disqus_shortname:
+```
 
 ## Front-Matter ##
 
