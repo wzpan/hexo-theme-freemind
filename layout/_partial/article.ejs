@@ -3,6 +3,7 @@
 <div class="row <% if (post) { %>post<% } else { %>page<% } %>">
 	<!-- cols -->
 	<% if (post) { %>
+	<div id="top_meta"></div>
 	<div class="col-md-9">
 	<% } else { %>
 	<div class="col-md-12">
@@ -27,12 +28,13 @@
 	
 	<!-- comment -->
 	<%- partial('post/comment', {page: item}) %>
-	
 	</div> <!-- col-md-9/col-md-12 -->
-	
+		
 	<% if (post) { %>
+	<div id="side_meta">
 		<%- partial('post/meta', {item: item}) %>
-	<% } %>
+	</div>
+	<% } %>	
 
 </div><!-- row -->
 <%- partial('post/comment_footer', {page: item}) %>

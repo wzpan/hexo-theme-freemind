@@ -25,10 +25,24 @@ $(document).ready(function() {
 			$(".navbar").fadeTo(100, 0.2);
 		}
 	});
-	
-	if ($(window).width() < 980) {
-		//$("#post_meta").remove();
-		$("#post_meta").insertBefore(".mypage");
-	}
+
+	replaceMeta();
+
+	$(window).resize(function(){
+		replaceMeta();
+	});
 });
 
+replaceMeta = function(){
+	if ($(window).width() < 980) {
+		if ($("#side_meta #post_meta").length>0) {
+			console.log("side has post meta");
+			$("#post_meta").appendTo("#top_meta");
+		}
+	} else {
+		if ($("#top_meta #post_meta").length>0) {
+			console.log("top has post meta");
+			$("#post_meta").appendTo("#side_meta");
+		}
+	}
+}
