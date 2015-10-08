@@ -1,6 +1,8 @@
 Hexo-Theme-Freemind
 ===
 
+![screenshots](http://wzpan.github.io/hexo-theme-freemind/images/screenshots.png)
+
 Freemind aims at fully taking advantages of Bootstrap.
 
 * [Demo](http://wzpan.github.io/hexo-theme-freemind/)
