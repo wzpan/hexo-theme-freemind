@@ -26,5 +26,9 @@ $(document).ready(function() {
 		}
 	});
 	
+	if ($(window).width() < 980) {
+		//$("#post_meta").remove();
+		$("#post_meta").insertBefore(".mypage");
+	}
 });
 

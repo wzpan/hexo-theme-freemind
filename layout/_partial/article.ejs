@@ -8,15 +8,15 @@
 	<div class="col-md-12">
 	<% } %>
 
-	<% if (item.description) { %>
-		 <div class="alert alert-success description">
-			<i class="fa fa-info-circle"></i> <%- markdown(item.description) %>			
-		</div> <!-- alert -->
-	<% } %>		
-
 	<!-- content -->
 	<div class="mypage">		
-	    <%- item.content %>	  
+	  <% if (item.description) { %>
+		 <div class="alert alert-success description">
+			<i class="fa fa-info-circle"></i> <%- markdown(item.description) %>			
+		 </div> <!-- alert -->
+	  <% } %>		
+
+	  <%- item.content %>	  
 	</div>
 
 	<div>
