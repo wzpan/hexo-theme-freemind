@@ -1,7 +1,11 @@
 <div class="entry">
   <div class="row">
 	<% if (item.feature ) { %>
-  		<div class="thumbnail"><a href="<%- config.root %><%= item.path %>"><img src="<%= item.feature %>" alt="<%= item.title %>"  class="nofancybox"></a>
+           <% if (config.post_asset_folder){ %>
+  	      <div class="thumbnail"><a href="<%- config.root %><%= item.path %>"><img src="<%= item.path %><%= item.feature %>" alt="<%= item.title %>"  class="nofancybox"></a>
+           <% } else { %>
+              <div class="thumbnail"><a href="<%- config.root %><%= item.path %>"><img src="<%= item.feature %>" alt="<%= item.title %>"  class="nofancybox"></a>
+           <% } %>
 		</div>
 	<% } %>
 	<% if (item.excerpt && index) { %>
