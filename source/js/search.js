@@ -26,17 +26,17 @@ var searchFunc = function(path, search_id, content_id) {
                 // perform local searching
                 datas.forEach(function(data) {
                     var isMatch = true;
-                    var content_index = [];                    
-                    if (!data.title) {
+                    var content_index = [];                                                       
+                    if (!data.title || data.title.trim() === '') {
                         data.title = "Untitled";
                     }
-                    var data_title = data.title.trim().toLowerCase();
+                    var data_title = data.title.trim().toLowerCase();     
                     var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
                     var data_url = data.url;
                     var index_title = -1;
                     var index_content = -1;
                     var first_occur = -1;
-                    // only match artiles with not empty titles and contents
+                    // only match artiles with not empty contents
                     if (data_content !== '') {
                         keywords.forEach(function(keyword, i) {
                             index_title = data_title.indexOf(keyword);
