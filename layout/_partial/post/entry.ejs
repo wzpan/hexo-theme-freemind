@@ -1,21 +1,18 @@
 <div class="entry">
   <div class="row">
 	<% if (item.feature ) { %>
-           <% var feature_path = item.feature; %>
-           <% if (config.post_asset_folder) { %>
-              <% feature_path = item.path + item.feature; %>
+           <% if (config.post_asset_folder){ %>
+  	      <div class="thumbnail"><a href="<%- config.root %><%= item.path %>"><img src="<%= item.path %><%= item.feature %>" alt="<%= item.title %>"  class="nofancybox"></a>
            <% } else { %>
-              <% feature_path = item.feature; %>
+              <div class="thumbnail"><a href="<%- config.root %><%= item.path %>"><img src="<%= item.feature %>" alt="<%= item.title %>"  class="nofancybox"></a>
            <% } %>
-	   <div class="thumbnail"><a href="<%- config.root %><%= item.path %>"><img src="<%= feature_path %>" alt="<%= item.title %>"  class="nofancybox"></a></div>
+		</div>
 	<% } %>
-        <% var content; %>
-	<% if (item.excerpt && index) { %>           
-		<% content = item.excerpt %>
+	<% if (item.excerpt && index) { %>
+		<%- item.excerpt %>
 	<% } else { %>
-		<%- content = item.content %>
-	<% } %>        
-        <%- content %>
+		<%- item.content %>
+	<% } %>
 	</div>
   <a type="button" href="<%- config.root %><%- item.path %>#more" class="btn btn-default more"><%= __('read_more') %></a>
 </div>
