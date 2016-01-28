@@ -27,8 +27,10 @@
 	</div>
 	
     <!-- bdshare -->
-    <%- partial('post/bdshare', {page: item}) %>
-    <%- partial('post/jiathis', {page: item}) %>
+    <% if (post) { %>
+        <%- partial('post/bdshare', {page: item}) %>
+        <%- partial('post/jiathis', {page: item}) %>
+    <% } %>
 
 	<!-- comment -->
 	<%- partial('post/comment', {page: item}) %>
