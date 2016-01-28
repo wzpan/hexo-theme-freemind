@@ -25,10 +25,11 @@
 	<%- partial('post/pagination', {page: item}) %>
     </center>
 	</div>
-
-	<!-- jiathis -->
-    <%- partial('post/jiathis', {page: item}) %>
 	
+    <!-- bdshare -->
+    <%- partial('post/bdshare', {page: item}) %>
+    <%- partial('post/jiathis', {page: item}) %>
+
 	<!-- comment -->
 	<%- partial('post/comment', {page: item}) %>
 	</div> <!-- col-md-9/col-md-12 -->

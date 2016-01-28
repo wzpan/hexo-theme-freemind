@@ -1,6 +1,10 @@
-slogan: "Yet another bootstrap theme."
+slogan: "while(true){eat(); sleep(); code();}"
 
 menu:
+  - title: Home
+    url: 
+    intro: PytLab's Home
+    icon: "fa fa-bank"
   - title: Archives
     url: archives
     intro: "All the articles."
@@ -19,41 +23,57 @@ menu:
     icon: "fa fa-user"
 
 links:
-  - title: Freemind
-    url: https://github.com/wzpan/freemind/
-    intro: "Freemind's Github repository."
-    icon: "fa fa-github"
-  - title: "My Github"
-    url: http://www.github.com/wzpan
+  - title: "Github-PytLab"
+    url: https://github.com/PytLab
     intro: "My Github account."
     icon: "fa fa-github"
-  - title: "My LinkedIn"
-    url: http://www.linkedin.com/in/hahack
-    intro: "My Linkin account."
-    icon: "fa fa-linkedin"
+  - title: "Weibo-PytLab"
+    url: http://weibo.com/shaowugui 
+    intro: "My Weibo account."
+    icon: "fa fa-weibo"
+  - title: "Email"
+    url: mailto:shaozhengjiang@gmail.com
+    intro: "Send Email to me"
+    icon: "fa fa-mail-forward"
+  - title: "StackOverflow-PytLab"
+    url: http://stackoverflow.com/users/4014840/pytlab
+    intro: "My StackOverflow account"
+    icon: "fa fa-stack-overflow"
+  - title: "Hexo Repo"
+    url: https://github.com/hexojs/hexo
+    icon: "fa fa-code-fork"
+  - title: "Freemind Repo"
+    url: https://github.com/wzpan/hexo-theme-freemind
+    icon: "fa fa-code-fork"
+  - title: "My Freemind Repo"
+    intro: "Freemind theme customized by Me"
+    url: https://github.com/PytLab/hexo-theme-freemind
+    icon: "fa fa-code-fork"
+  
 
 widgets:
 - search
+- recent_posts  
 - category
 - tagcloud
-- recent_posts  
 - links
 
 rss: 
 fancybox: true
 favicon: favicon.png
-duoshuo_shortname:
+duoshuo_shortname: pytlab
 
 # Analytics
 google_analytics:
   enable: false
   siteid:
 baidu_tongji:
-  enable: false
-  siteid:
+  enable: true
+  siteid: pytlab.github.io
 
 # search
 # swiftype_key: ZP2ZSuHgipSZfRyU8uTR
 
-# jiathis
+# share widgets
+bdshare: true
 jiathis: false
