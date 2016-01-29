@@ -54,3 +54,7 @@ baidu_tongji:
 
 # search
 # swiftype_key: ZP2ZSuHgipSZfRyU8uTR
+
+# share widgets
+bdshare: true
+jiathis: false
