@@ -133,6 +133,10 @@ baidu_tongji:
 
 # Search
 swiftype_key: 
+
+# share button
+bdshare: true
+jiathis: false
 ```
 
 * **slogan** - slogan display at the index page
@@ -144,6 +148,9 @@ swiftype_key:
 * **duoshuo_shortname** - DuoShuo ID, if you prefer to use duoshuo instead of Disqus
 * **analytics** - Analytics ID. Supports both Google Analytics and Baidu Tongji.
 * **swiftype_key** - Swifttype key to enable local searching. Leave it blank or comment this line if you want to use build-in local search engine.
+* **bdshare** - Baidu share button at the bottom of article.
+* **jiathis** - jiathis share button at the bottom of article.
+
 
 If you prefer to use disqus, the setting of disqus should be placed at your **root** `_config.yml`:
 
