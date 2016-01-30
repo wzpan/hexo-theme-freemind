@@ -12,8 +12,8 @@
 			<div class="article-title"><a href="<%- config.root %><%- item.path %>" <% if(item.description) { %>title="<%= item.description %>"<% } %>><%= item.title %></a></div>						
 		</h3>
 	<% } else { %>
-		<div class="page-header">		
-			<h1><% if (item.icon) { %> <i class="<%= item.icon %>"></i> <% } %> <% if (item.page_title) { %><%= item.page_title %><% }else{ %><%= item.title %><% } %></h1>
+		<div class="page-header <% if (theme.inverse){ %>page-header-inverse <% } %>">		
+			<h1 class="title <% if (theme.inverse){ %>title-inverse <% } %>"><% if (item.icon) { %> <i class="<%= item.icon %>"></i> <% } %> <% if (item.page_title) { %><%= item.page_title %><% }else{ %><%= item.title %><% } %></h1>
 		</div>		
 	<% } %>
 <% } %>

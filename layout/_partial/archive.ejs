@@ -22,8 +22,8 @@
    %>
 
 <!-- title -->
-<div class="page-header">
-  <h1 class="archive-title<% if (page.tag){ %>-tag<% } else if (page.category){ %>-category<% } %>"><%= title %></h1>
+<div class="page-header <% if (theme.inverse){ %>page-header-inverse <% } %>">
+  <h1 class="archive-title<% if (page.tag){ %>-tag<% } else if (page.category){ %>-category<% } %> title <% if (theme.inverse){ %>title-inverse <% } %>"><%= title %></h1>
 </div>
 
 <div class="row page">

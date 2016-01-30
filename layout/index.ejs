@@ -1,5 +1,5 @@
-<div class="page-header">
-  <h1><% if (config.subtitle){ %><%= config.subtitle %><% } else { %><%= config.title %><% } %></h1>
+<div class="page-header <% if (theme.inverse){ %>page-header-inverse <% } %>">
+  <h1 class="title <% if (theme.inverse){ %>title-inverse <% } %>"><% if (config.subtitle){ %><%= config.subtitle %><% } else { %><%= config.title %><% } %></h1>
 </div>
 
 <%- partial('_partial/index', {index: true}) %>

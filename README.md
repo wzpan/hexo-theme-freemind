@@ -8,12 +8,14 @@ Freemind aims at fully taking advantages of Bootstrap.
 * [Demo](http://wzpan.github.io/hexo-theme-freemind/)
 * [Q&A](http://wzpan.github.io/hexo-theme-freemind/2014/03/16/qna/)
 * [Tag Plugins](http://wzpan.github.io/hexo-theme-freemind/2014/03/16/tag-plugins/)
+* [Color Themes](http://wzpan.github.io/hexo-theme-freemind/2016/01/30/color-themes/)
 * [Readme in Chinese](http://hahack.com/codes/hexo-theme-freemind/)
 
 ## Requirements ##
 
 * Hexo >= 3.0
 * [hexo-tag-bootstrap](https://github.com/wzpan/hexo-tag-bootstrap) >= 0.0.8 (optional)
+
 ## Features ##
 
 * **Bootstrap** - get the power of Twitter Bootstrap with minimal hassle;
@@ -24,6 +26,7 @@ Freemind aims at fully taking advantages of Bootstrap.
   - badge - a badge with text;
   - alert - alert messages with text and specified color; 
 * **Local Search Engine** - a build-in local search engine, with the help of [hexo-generator-search](https://github.com/paichyperiondev/hexo-generator-search).
+* **Color Themes** - luxuriant Bootswatch color themes for choice. 
 
 ## Install ##
 
@@ -82,6 +85,9 @@ $ git pull
 
 ```
 slogan: Yet another bootstrap theme.
+
+theme: cerulean
+inverse: false
 
 menu:
   - title: Archives
@@ -185,3 +191,4 @@ see [Examples](https://github.com/wzpan/freemind/wiki/Examples).
 
 * The theme is built based on [Twitter-Bootstrap 3.1.1](getbootstrap.com/3.1.1/);
 * The beautiful icons are from [Font Awesome](http://fortawesome.github.io/Font-Awesome/icons/).
+* Build-in color themes are from [Bootswatch](bootswatch.com).

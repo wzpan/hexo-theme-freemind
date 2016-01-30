@@ -1,0 +1,60 @@
+h1.title{
+  color: @navbar-default-link-color;
+
+  &-inverse {
+    color: @navbar-inverse-link-hover-color;
+  }
+
+}
+
+h2{
+  color: @state-success-text;
+}
+
+h3 {
+  color: @state-warning-text;
+}
+
+h4 {
+  color: @state-danger-text;
+}
+
+.content {
+  background-color: @body-bg;
+  color: @text-color;
+  margin-top: floor((@navbar-height/2))-5;
+}
+
+a{color:@link-color}
+a:hover{color:@link-hover-color}
+
+#gotop{ 
+  background-color: @btn-primary-bg;
+}
+
+#gotop span{ 
+  color:@btn-primary-color;
+} 
+#gotop span:hover{ 
+  color:@btn-primary-color; 
+} 
+
+#local-search-result {
+  background-color:@well-bg;
+}
+
+.page-header {
+  background-color: @navbar-default-bg;
+  filter: none;
+
+  &-inverse {
+    background-color: @navbar-inverse-bg;
+    filter: none;
+    border-bottom: 1px solid darken(@navbar-inverse-bg, 10%);
+  }
+}
+
+.container-narrow > footer p {
+  background-color: @well-bg;
+}
+

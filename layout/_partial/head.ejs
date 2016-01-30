@@ -43,8 +43,9 @@
   <% if (theme.favicon){ %>
     <link href="<%- config.root %><%- theme.favicon %>" rel="icon">
   <% } %>
-  
-  <link rel="stylesheet" href="<%- config.root %>css/bootstrap.min.css" media="screen" type="text/css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="<%- config.root %>css/themes/<%- theme.theme %>.css" media="screen" type="text/css">
   <link rel="stylesheet" href="<%- config.root %>css/font-awesome.css" media="screen" type="text/css">
   <link rel="stylesheet" href="<%- config.root %>css/style.css" media="screen" type="text/css">
   <link rel="stylesheet" href="<%- config.root %>css/responsive.css" media="screen" type="text/css">
