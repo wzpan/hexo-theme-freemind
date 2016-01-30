@@ -1,5 +1,16 @@
 <%- partial('post/title', {item: item, index: false}) %>
 
+<% if (item.shadow ) { %>
+   <style type="text/css">
+           img, video {
+                -webkit-box-shadow:0 0 10px rgba(0, 0, 0, .5);  
+                -moz-box-shadow:0 0 10px rgba(0, 0, 0, .5);  
+                box-shadow:0 0 10px rgba(0, 0, 0, .5);  
+           }
+   </style>
+<% } %>
+
+
 <div class="row <% if (post) { %>post<% } else { %>page<% } %>">
 	<!-- cols -->
 	<% if (post) { %>
@@ -25,6 +36,12 @@
 	<%- partial('post/pagination', {page: item}) %>
     </center>
 	</div>
+
+    <!-- share -->
+    <% if (post) { %>
+        <%- partial('post/bdshare', {page: item}) %>
+        <%- partial('post/jiathis', {page: item}) %>
+    <% } %>
 	
 	<!-- comment -->
 	<%- partial('post/comment', {page: item}) %>

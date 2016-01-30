@@ -1,7 +1,7 @@
 slogan: "Yet another bootstrap theme."
 
-theme: cerulean
-inverse: true
+theme: bootstrap
+inverse: inverse
 
 menu:
   - title: Archives
@@ -57,3 +57,8 @@ baidu_tongji:
 
 # search
 # swiftype_key: ZP2ZSuHgipSZfRyU8uTR
+
+# share widgets
+bdshare: true
+jiathis: false
+
