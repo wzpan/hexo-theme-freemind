@@ -2,7 +2,6 @@ Hexo-Theme-Freemind
 ===
 
 ![screenshots](http://wzpan.github.io/hexo-theme-freemind/images/screenshots.png)
-![color themes](http://wzpan.github.io/hexo-theme-freemind/images/color-themes.png)
 
 Freemind aims at fully taking advantages of Bootstrap.
 
@@ -27,7 +26,9 @@ Freemind aims at fully taking advantages of Bootstrap.
   - badge - a badge with text;
   - alert - alert messages with text and specified color; 
 * **Local Search Engine** - a build-in local search engine, with the help of [hexo-generator-search](https://github.com/paichyperiondev/hexo-generator-search).
-* **Color Themes** - luxuriant Bootswatch color themes for choice. 
+* **Color Themes** - luxuriant Bootswatch color themes for choice.
+
+![color themes](http://wzpan.github.io/hexo-theme-freemind/images/color-themes.gif)
 
 ## Install ##
 
