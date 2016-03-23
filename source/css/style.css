@@ -262,12 +262,6 @@ a.inline-ref:hover {
   blockquote
    ========================================================================== */
 
-blockquote {
-  border-left:5px solid #cccccc;
-  font-size: 1em;
-  background-color: #fff;
-}
-
 blockquote p, blockquote ol, blockquote ul, blockquote li, .slogan{
   font-family: 'Open Sans',"Helvetica Neue", Helvetica, "Segoe UI", Ubuntu, "Hiragino Sans GB", '楷体', 'STKaiti';
 }
