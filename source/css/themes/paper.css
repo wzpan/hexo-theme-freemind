@@ -7520,3 +7520,7 @@ a:hover {
 .container-narrow > footer p {
   background-color: #f9f9f9;
 }
+blockquote {
+  border-left: 5px solid #eeeeee;
+  font-size: 16.25px;
+}

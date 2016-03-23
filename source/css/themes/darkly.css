@@ -7061,6 +7061,10 @@ a:hover {
 .container-narrow > footer p {
   background-color: #303030;
 }
+blockquote {
+  border-left: 5px solid #464545;
+  font-size: 18.75px;
+}
 h1.title-inverse {
   color: #fff!important;
 }

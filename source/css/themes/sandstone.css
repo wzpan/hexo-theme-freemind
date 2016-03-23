@@ -6943,3 +6943,7 @@ a:hover {
 .container-narrow > footer p {
   background-color: #f8f5f0;
 }
+blockquote {
+  border-left: 5px solid #dfd7ca;
+  font-size: 17.5px;
+}
