@@ -27,7 +27,8 @@
 			<% site.categories.sort('name').each(function(item){ %>
 			<h4 class="archive-ul show" data-toggle="collapse" id="<%= item.name %>" data-target="#modal-<%= item.name %>"> <%= item.name %> <b class="caret"></b></h4>
 			<ul id="modal-<%= item.name %>" class="collapse in">
-
+			
+			<!-- Modified by Armixy-->
 			<% site.posts.sort('date', -1).forEach(function(it){ %>
 				<% if (it.categories.length >=1 ){ %>
 					<% it.categories.data.forEach(function(e){ %>
