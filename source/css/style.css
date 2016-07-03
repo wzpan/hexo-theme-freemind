@@ -401,7 +401,7 @@ h4 {
   margin: 10px;
 }
 
-.page h3.title {
+.page h3.title, .page h3.title-top {
   position:relative;
   padding: 2px 5px 5px 5px;
   font-size: 1.9em;
@@ -409,15 +409,19 @@ h4 {
   font-family: 'PT Sans Narrow', '雅黑', '文泉驿微米黑', '黑体', sans-serif;
 }
 
-.page h3.title a {
+.page h3.title a, .page h3.title-top a {
   color: black;
 }
 
-.page h3.title div.article-title {
-  width:80%;
+.page h3.title div.article-title, .page h3.title-top div-article-title {
+    width:80%;    
 }
 
-.page h3.title div.date {
+.article-title-text{
+    padding-right: 6px;
+}    
+
+.page h3.title div.date, .page h3.title-top div.date {
   /* position:absolute; */
   /* right:5px; */
   float: right;

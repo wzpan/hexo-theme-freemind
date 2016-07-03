@@ -1,7 +1,7 @@
 slogan: "Yet another bootstrap theme."
 
-theme: bootstrap
-inverse: inverse
+theme: cerulean
+inverse: true
 
 menu:
   - title: Archives
