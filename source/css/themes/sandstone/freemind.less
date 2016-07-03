@@ -1,0 +1,11 @@
+.page-header {
+  .box-shadow(0 1px 10px rgba(0, 0, 0, 0.1));
+  &-inverse {
+    #gradient > .vertical-three-colors(lighten(@navbar-inverse-bg, 8%), lighten(@navbar-inverse-bg, 4%), 60%, darken(@navbar-inverse-bg, 2%));
+  }
+}
+
+.page h3.title {
+  background-color: lighten(@navbar-inverse-bg, 40%);
+  border-top:3px solid lighten(@navbar-inverse-bg, 5%);
+}

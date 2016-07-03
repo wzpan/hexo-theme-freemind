@@ -19,6 +19,7 @@ Freemind aims at fully taking advantages of Bootstrap.
 ## Features ##
 
 * **Bootstrap** - get the power of Twitter Bootstrap with minimal hassle;
+* **2 columns layout** - the most traditional and comfortable blog layout;
 * **Tag plugins** - luxuriant Bootstrap tag plugins, provided by [hexo-tag-bootstrap](https://github.com/wzpan/hexo-tag-bootstrap), including:
   - textcolor - a paragraph of text with specified color;
   - button - a button with target links, text and specified color;
@@ -26,7 +27,8 @@ Freemind aims at fully taking advantages of Bootstrap.
   - badge - a badge with text;
   - alert - alert messages with text and specified color; 
 * **Local Search Engine** - a build-in local search engine, with the help of [hexo-generator-search](https://github.com/paichyperiondev/hexo-generator-search).
-* **Color Themes** - luxuriant Bootswatch color themes for choice.
+* **Color Themes** - luxuriant Bootswatch color themes for choice;
+* **Pin to top** - able to pin any article to the top of the first index page.
 
 ![color themes](http://wzpan.github.io/hexo-theme-freemind/images/color-themes.gif)
 
@@ -176,6 +178,7 @@ There are some new front-matter settings in Freemind that you can use to decorat
 * **description** - a short description about the articles that will be display at the top of the post
 * **feature** - sets a feature image that will be show at the index page
 * **toc** - renders a table of contents
+* **top** - pin the article to top if it is set to `true`
 
 For example:
 
