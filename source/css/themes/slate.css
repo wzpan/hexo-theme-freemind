@@ -7286,6 +7286,13 @@ a.list-group-item-danger.active:focus {
   background-color: #ffffff;
   border-top: 3px solid #878f94;
 }
+#ds-thread #ds-reset li.ds-tab a {
+  text-shadow: none!important;
+  color: #ffffff;
+}
+#ds-thread #ds-reset .ds-comment-body p {
+  color: #fff;
+}
 h1.title {
   color: #c8c8c8;
 }
