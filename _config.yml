@@ -45,7 +45,7 @@ widgets:
 rss: 
 fancybox: true
 favicon: favicon.png
-duoshuo_shortname:
+duoshuo_shortname: #freemindtheme
 
 # Analytics
 google_analytics:
