@@ -1,0 +1,19 @@
+<% if (item.link) { %>
+	<% if (item.title){ %>
+		<h1 class="title"><a href="<%- item.link %>" target="_blank"><%= item.title %></a></h1>
+	<% } else { %>
+		<h1 class="title"><a href="<%- item.link %>" target="_blank"><%= item.link %></a></h1>
+	<% } %>
+<% } else { %>
+	<% if (index) { %>
+	<!-- display as entry -->	
+		<h3 class="title-top">
+			<div class="date"> <%= item.date.format(config.date_format) %> </div>
+			<div class="article-title"><a href="<%- config.root %><%- item.path %>" <% if(item.description) { %>title="<%= item.description %>"<% } %> class="article-title-text"><%= item.title %></span></a><span class="badge"><%= __('top') %></div>						
+		</h3>
+	<% } else { %>
+		<div class="page-header <% if (theme.inverse){ %>page-header-inverse <% } %>">		
+			<h1 class="title <% if (theme.inverse){ %>title-inverse <% } %>"><% if (item.icon) { %> <i class="<%= item.icon %>"></i> <% } %> <% if (item.page_title) { %><%= item.page_title %><% }else{ %><%= item.title %><% } %></h1>
+		</div>		
+	<% } %>
+<% } %>
