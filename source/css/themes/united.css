@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Ubuntu:400,700");
+.page h3.title-top {
+  background-color: #fbdedb;
+  border-top: 3px solid #ef8b80;
+}
 /*!
  * Bootstrap v3.3.6 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
