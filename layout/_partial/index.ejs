@@ -11,9 +11,21 @@
 		<div class="mypage">
 		
 		<!-- title and entry -->
-		<% page.posts.each(function(item){ %>
-			<%- partial('post/title', {item: item, index: index}) %>
-			<%- partial('post/entry', {item: item, index: index}) %>
+        <!-- render top articles firstly -->
+        <% if (page.current == 1) { %>
+		<% site.posts.each(function(item){ %>
+            <% if (item.top) { %>
+			  <%- partial('post/title_top', {item: item, index: index}) %>
+			  <%- partial('post/entry', {item: item, index: index}) %>
+            <% } %>
+		<% }); %>
+        <% } %>
+        <!-- render other articles -->
+        <% page.posts.each(function(item){ %>
+           <% if (!item.top) { %>
+			  <%- partial('post/title', {item: item, index: index}) %>
+			  <%- partial('post/entry', {item: item, index: index}) %>
+           <% } %>
 		<% }); %>
 
 		</div>
