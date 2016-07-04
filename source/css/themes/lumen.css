@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic");
+.page h3.title-top {
+  background-color: #fbdedb;
+  border-top: 3px solid #ef8b80;
+}
 /*!
  * Bootstrap v3.3.6 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
@@ -7140,6 +7144,10 @@ a.list-group-item-danger.active:focus {
 }
 .popover {
   color: #555555;
+}
+.page h3.title-top {
+  background-color: #fff;
+  border-top: 3px solid #fff;
 }
 h1.title {
   color: #999999;
