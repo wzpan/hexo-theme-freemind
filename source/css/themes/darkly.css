@@ -7094,3 +7094,10 @@ h1.title-inverse {
   background-color: #bcffee;
   border-top: 3px solid #00d69f;
 }
+#ds-thread #ds-reset li.ds-tab a {
+  text-shadow: none!important;
+  color: #0ce3ac;
+}
+#ds-thread #ds-reset .ds-comment-body p {
+  color: #fff;
+}
