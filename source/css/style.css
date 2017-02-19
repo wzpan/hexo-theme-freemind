@@ -66,10 +66,6 @@ body {
   font-family: 'Open Sans',"Helvetica Neue", "Helvetica","Microsoft YaHei", "WenQuanYi Micro Hei",Arial, sans-serif;
 }
 
-.page .more {
-  text-pull: right;
-}
-
 .post .date {
   margin-bottom:20px;
   font-weight:bold;
