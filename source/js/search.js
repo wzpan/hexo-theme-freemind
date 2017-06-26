@@ -34,6 +34,7 @@ var searchFunc = function(path, search_id, content_id) {
             }).get();
 
             var $input = document.getElementById(search_id);
+			if (!$input) return;
             var $resultContent = document.getElementById(content_id);
 
             $input.addEventListener('input', function(){
