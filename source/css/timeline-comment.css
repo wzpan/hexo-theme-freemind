@@ -1,0 +1,152 @@
+.discussion-timeline {
+    position: relative;
+    float: left;
+    width: 760px;
+}
+
+.timeline-comment {
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #d1d5da;
+    border-radius: 3px;
+}
+
+.timeline-comment-wrapper:first-child {
+    margin-top: 0;
+}
+
+.timeline-comment-wrapper {
+    position: relative;
+    padding-left: 60px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+}
+
+.timeline-comment-avatar {
+    float: left;
+    margin-left: -60px;
+    border-radius: 3px;
+}
+
+.avatar-parent-child {
+    position: relative;
+}
+
+.timeline-comment-header {
+    padding-right: 15px;
+    padding-left: 15px;
+    color: #586069;
+    background-color: #f6f8fa;
+    border-bottom: 1px solid #d1d5da;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+	line-height: 1em;
+}
+
+.timeline-comment-header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.timeline-comment-actions {
+    float: right;
+    margin-right: -5px;
+    margin-left: 10px;
+}
+
+.timeline-comment-label {
+    float: right;
+    padding: 2px 5px;
+    margin: 8px 0 0 10px;
+    font-size: 12px;
+    cursor: default;
+    border: 1px solid rgba(27,31,35,0.1);
+    border-radius: 3px;
+}
+
+.timeline-comment-header-text {
+    max-width: 78%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.text-normal {
+    font-weight: normal !important;
+}
+
+.f5 {
+    font-size: 14px !important;
+}
+
+.tooltipped {
+    position: relative;
+}
+
+.comment-body {
+    width: 100%;
+    padding: 15px;
+    overflow: visible;
+    font-size: 14px;
+}
+
+.markdown-body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 16px;
+    line-height: 1.5;
+    word-wrap: break-word;
+}
+
+.d-block {
+    display: block !important;
+}
+
+.markdown-body>*:last-child {
+    margin-bottom: 0 !important;
+}
+
+.markdown-body>*:first-child {
+    margin-top: 0 !important;
+}
+
+.markdown-body ul, .markdown-body ol {
+    padding-left: 2em;
+}
+
+.markdown-body p, .markdown-body blockquote, .markdown-body ul, .markdown-body ol, .markdown-body dl, .markdown-body table, .markdown-body pre {
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.reorderable-task-lists .markdown-body ol:not(.contains-task-list) li, .reorderable-task-lists .markdown-body ul:not(.contains-task-list) li {
+    margin-left: 0;
+}
+github-7dc531f….css:1
+.reorderable-task-lists .markdown-body li:not(.task-list-item) {
+    margin-left: 26px;
+}
+github-7dc531f….css:1
+.markdown-body li+li {
+    margin-top: 0.25em;
+}
+
+.markdown-body img {
+    max-width: 100%;
+    box-sizing: content-box;
+    background-color: #fff;
+}
+
+.comment-count {
+  color: #555;
+  font-weight: bold;
+  padding: 12px 0;
+}
+
+.no-comment {
+  opacity: .6;
+  line-height: 107px;
+  text-align: center;
+}
+
+
