@@ -2,6 +2,8 @@
     position: relative;
     float: left;
     width: 100%;
+    background-color: #fff;
+    border-bottom: 2px solid #e6ebf1;
 }
 
 .discussion-timeline::before {
@@ -75,7 +77,7 @@
 .timeline-comment-wrapper>.timeline-comment::before, .timeline-new-comment .timeline-comment::before {
     border-width: 8px;
     border-right-color: #d1d5da;
-                                                     }
+}
 
 .timeline-comment-wrapper>.timeline-comment::after, .timeline-new-comment .timeline-comment::after {
     margin-top: 1px;
@@ -214,11 +216,11 @@
 .reorderable-task-lists .markdown-body ol:not(.contains-task-list) li, .reorderable-task-lists .markdown-body ul:not(.contains-task-list) li {
     margin-left: 0;
 }
-github-7dc531f….css:1
+
 .reorderable-task-lists .markdown-body li:not(.task-list-item) {
     margin-left: 26px;
 }
-github-7dc531f….css:1
+
 .markdown-body li+li {
     margin-top: 0.25em;
 }
@@ -288,4 +290,8 @@ github-7dc531f….css:1
     background-color: #fff;
     border-top: 2px solid #e6ebf1;
     height: 10px;
+}
+
+.goto-comment {
+    margin-top: 10px; 
 }

@@ -53,9 +53,9 @@ var _getComment = function(comments, comments_url, page, callback) {
     });
 }
 
-var _getCommentsUrl = function(github_repo, page_title, page, callback) {
+var _getCommentsUrl = function(github_user, github_repo, page_title, page, callback) {
     $.ajax({
-        url: 'https://api.github.com/repos/' + github_repo + '/issues?page=' + page,
+        url: 'https://api.github.com/repos/' + github_user + '/' + github_repo + '/issues?page=' + page,
         dataType: 'json',
         success: function (issues) {
             if (!issues || issues.length <= 0) {
@@ -71,7 +71,7 @@ var _getCommentsUrl = function(github_repo, page_title, page, callback) {
                 }
 			});
             page += 1;
-            _getCommentsUrl(github_repo, page_title, page, callback);
+            _getCommentsUrl(github_user, github_repo, page_title, page, callback);
 			return;
         },
         error: function() {
@@ -81,7 +81,7 @@ var _getCommentsUrl = function(github_repo, page_title, page, callback) {
     });
 }
 
-var _renderHTML = function(comments, comments_url) {
+var _renderHTML = function(github_user, comments, comments_url) {
 	//let res = `<span class="comment-count">${comments.length} Comments</span>`;
 	let res = '';
     var timeagoInstance = timeago();
@@ -144,11 +144,10 @@ var _renderHTML = function(comments, comments_url) {
 						`					
 		});
         res += '</div></div>'
-	}
-    res += '<div class="discussion-timeline-actions"></div>'
+	}    
 	issue_url = comments_url.replace('api.github.com/repos', 'github.com').replace('comments', '');
 	res += `
-		<p class="pull-right">
+		<p class="goto-comment pull-right">
 		<a href="${issue_url}" class="btn btn-large btn-primary" target="_blank">Go to Comment &rarr;</a>
 		</p>
 		`
@@ -157,29 +156,30 @@ var _renderHTML = function(comments, comments_url) {
 	
 }
 
-var getComments = function(github_repo, page_title, issue_id, callback) {
+var getComments = function(github_comment, page_title, issue_id, callback) {
     'use strict';
     var comments_url;
 	var comments = new Array();
+    var github_user = github_comment.user;
+    var github_repo = github_comment.repo;
     if (!issue_id || issue_id == 'undefined' || typeof(issue_id) == 'undefined') {
-        _getCommentsUrl(github_repo, page_title, 1, (comments_url) => {
+        _getCommentsUrl(github_user, github_repo, page_title, 1, (comments_url) => {
 			if (comments_url != '' && comments_url != undefined) {
 				_getComment(comments, comments_url, 1, (comments) => {
-					console.log(comments);
 					_renderHTML(comments, comments_url);
 					(callback && typeof(callback) === "function") && callback(comments);
 					return;
 				});
 			} else {
-				_renderHTML(comments, comments_url);
+				_renderHTML(github_user, comments, comments_url);
 				(callback && typeof(callback) === "function") && callback(comments);
 				return;
 			}
 		});
     } else {
-        comments_url = 'https://api.github.com/repos/' + github_repo + '/issues/' + issue_id + '/comments';
+        comments_url = 'https://api.github.com/repos/' + github_user + '/' + github_repo + '/issues/' + issue_id + '/comments';
 		_getComment(comments, comments_url, 1, (comments) => {
-			renderHTML(comments, comments_url);
+			renderHTML(github_user, comments, comments_url);
 			(callback && typeof(callback) === "function") && callback(comments);
 			return;
 		});
