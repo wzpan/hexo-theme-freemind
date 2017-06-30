@@ -2,7 +2,6 @@
 <section id="comment">
   <h2 class="title"><%= __('comment') %></h2>
   <% if(theme.github_comment) { %>
-  	 <!-- <%- ghcomment({repo_url:theme.github_comment, title:page.title, issue_id:page.issue_id, page:page}) %> -->
 	 <div id="githubComment"></div>
 	 <script type="text/javascript">
 	   getComments("<%= theme.github_comment %>", "<%= page.title %>", "<%= page.issue_id %>");

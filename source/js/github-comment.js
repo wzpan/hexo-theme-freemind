@@ -84,6 +84,7 @@ var _getCommentsUrl = function(github_repo, page_title, page, callback) {
 var _renderHTML = function(comments, comments_url) {
 	//let res = `<span class="comment-count">${comments.length} Comments</span>`;
 	let res = '';
+    var timeagoInstance = timeago();
 	if (!comments || comments.length <= 0) {
 		res += `
 <div class='js-discussion no-comment'>
@@ -91,9 +92,14 @@ var _renderHTML = function(comments, comments_url) {
 </div>
 `
 	} else {
-		res += '<div class="js-discussion js-socket-channel">'
+		res += `
+            <div class="discussion-timeline js-quote-selection-container">
+              <div class="js-discussion js-socket-channel">
+            `
 		comments.forEach(function(comment) {
 			let user = comment.user;
+            let content = markdown.toHTML(comment.body);
+            let ago = timeagoInstance.format(comment.created_at);
 			res += `
 						<div class="timeline-comment-wrapper js-comment-container">
 						<div class="avatar-parent-child timeline-comment-avatar">
@@ -115,9 +121,9 @@ var _renderHTML = function(comments, comments_url) {
 						
 					</strong>
 
-					commented
+			commented  
 
-						<a href="#issuecomment-${comment.id}" class="timestamp"><relative-time datetime="${comment.created_at}" title="${comment.created_at}">at ${comment.created_at}</relative-time></a>
+				<a href="#issuecomment-${comment.id}" class="timestamp"><relative-time datetime="${comment.created_at}" title="${comment.created_at}">${ago}</relative-time></a>
 
 					</h3>
 						</div>
@@ -127,7 +133,7 @@ var _renderHTML = function(comments, comments_url) {
 						<tbody class="d-block">
 						<tr class="d-block">
 						<td class="d-block comment-body markdown-body  js-comment-body">
-						<p>${comment.body}</p>
+						<p>${content}</p>
 						</td>
 						</tr>
 						</tbody>
@@ -135,14 +141,15 @@ var _renderHTML = function(comments, comments_url) {
 						</div>
 						</div>
 						</div>
-						`
-					res += '</div>'
+						`					
 		});
+        res += '</div></div>'
 	}
+    res += '<div class="discussion-timeline-actions"></div>'
 	issue_url = comments_url.replace('api.github.com/repos', 'github.com').replace('comments', '');
 	res += `
 		<p class="pull-right">
-		<a href="${issue_url}" class="btn btn-large btn-primary" target="_blank">Comment &rarr;</a>
+		<a href="${issue_url}" class="btn btn-large btn-primary" target="_blank">Go to Comment &rarr;</a>
 		</p>
 		`
 	var commentDIV = document.getElementById('githubComment');

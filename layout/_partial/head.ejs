@@ -55,7 +55,11 @@
   <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
   <script src="<%- config.root %>js/jquery-2.0.3.min.js"></script>
-  <script src="<%- config.root %>js/github-comment.js"></script>
+  <% if (theme.github_comment) { %>
+    <script src="<%- config.root %>js/github-comment.js"></script>
+    <script src="<%- config.root %>js/markdown.min.js"></script>
+    <script src="<%- config.root %>js/timeago.min.js"></script>
+  <% } %>
   <!-- analytics -->
   <%- partial('post/analytics') %>
 
