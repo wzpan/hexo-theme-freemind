@@ -1,0 +1,13 @@
+<div class="widget">
+    <% if(theme.github_comment) { %>
+	    <h4 class="dsq-widget-title">Recent Comments</h4>
+		<div class="recent-comments"></div>
+		<script type="text/javascript">
+		    getRecentCommentsList({
+			   github_user: "<%= theme.github_comment.user %>",
+	           github_repo: "<%= theme.github_comment.repo %>",
+			   count: "<%= theme.github_comment.count %>" ? "<%= theme.github_comment.count %>" : 5
+			});
+		</script>
+	<% } %>
+</div>

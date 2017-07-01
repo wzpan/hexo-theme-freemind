@@ -37,6 +37,7 @@ links:
 
 widgets:
 - search
+- recent_comments
 - category
 - tagcloud
 - recent_posts  
@@ -63,5 +64,7 @@ bdshare: true
 jiathis: false
 
 github_comment:
-  user: 'wzpan'
-  repo: 'hexo-theme-freemind-blog'
+  user: "wzpan"
+  repo: "hexo-theme-freemind-blog"
+  token: "0149f166735197952343b9f58d5bdc649567a8e1"
+  count: 5

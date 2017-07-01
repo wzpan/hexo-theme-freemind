@@ -1,11 +1,20 @@
 <% if (page.comment){ %>
 <section id="comment">
   <h2 class="title"><%= __('comment') %></h2>
-  <% if(theme.github_comment) { %>
-	 <div id="githubComment"></div>
+  <% if (theme.github_comment) { %>  	 
+	 <div id="github-comment"></div>
+	 <div id="loading-comment"></div>
 	 <script type="text/javascript">
-	   getComments("<%= theme.github_comment %>", "<%= page.title %>", "<%= page.issue_id %>");
-	 </script>	 
+	   getComments({
+	           github_user: "<%= theme.github_comment.user %>",
+	           github_repo: "<%= theme.github_comment.repo %>",
+			   no_comment: "<%= __('no_comment') %>",
+			   go_to_comment: "<%= __('go_to_comment') %>",
+			   no_issue: "<%= __('no_issue') %>",
+			   page_title: "<%= page.title %>",
+			   issue_id: "<%= page.issue_id %>"
+			   });
+	 </script>
   <% } else if(theme.duoshuo_shortname) { %>
   	 <div class="ds-thread" data-thread-key="<%- page.path %>" data-title="<%- page.title %>" data-url="<%- page.permalink %>"></div>  
   <% } else if(config.disqus_shortname) { %>
