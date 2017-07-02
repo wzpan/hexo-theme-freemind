@@ -63,8 +63,14 @@ baidu_tongji:
 bdshare: true
 jiathis: false
 
-github_comment:
+comment_js:
+  type: "github"
   user: "wzpan"
   repo: "hexo-theme-freemind-blog"
-  token: "0149f166735197952343b9f58d5bdc649567a8e1"
+  btn_class: "btn btn-large btn-primary"
+  comments_target: "#comment-thread"
+  recent_comments_target: "#recent-comments"
+  loading_target: "#loading-spin"
+  reversed_token: "232b130b29af1ea018cec5eea694fd2be76b4cd1"
   count: 5
+  

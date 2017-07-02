@@ -1,18 +1,23 @@
 <% if (page.comment){ %>
 <section id="comment">
   <h2 class="title"><%= __('comment') %></h2>
-  <% if (theme.github_comment) { %>  	 
-	 <div id="github-comment"></div>
-	 <div id="loading-comment"></div>
+  <% if (theme.comment_js) { %>  	 
+	 <div id="comment-thread"></div>
+	 <div id="loading-spin"></div>
 	 <script type="text/javascript">
 	   getComments({
-	           github_user: "<%= theme.github_comment.user %>",
-	           github_repo: "<%= theme.github_comment.repo %>",
+		       type: "<%= theme.comment_js.type %>",
+	           user: "<%= theme.comment_js.user %>",
+	           repo: "<%= theme.comment_js.repo %>",
+			   reversed_token: "<%= theme.comment_js.reversed_token %>",
 			   no_comment: "<%= __('no_comment') %>",
 			   go_to_comment: "<%= __('go_to_comment') %>",
 			   no_issue: "<%= __('no_issue') %>",
-			   page_title: "<%= page.title %>",
-			   issue_id: "<%= page.issue_id %>"
+			   issue_title: "<%= page.title %>",
+			   issue_id: "<%= page.issue_id %>",
+			   btn_class: "<%= theme.comment_js.btn_class %>" ? "<%= theme.comment_js.btn_class %>" : "btn",
+			   comments_target: "<%= theme.comment_js.comments_target %>" ? "<%= theme.comment_js.comments_target %>" : "#comment-thread",
+			   loading_target: "<%= theme.comment_js.loading_target %>"
 			   });
 	 </script>
   <% } else if(theme.duoshuo_shortname) { %>

@@ -51,12 +51,12 @@
   <link rel="stylesheet" href="<%- config.root %>css/responsive.css" media="screen" type="text/css">
   <link rel="stylesheet" href="<%- config.root %>css/highlight.css" media="screen" type="text/css">
   <link rel="stylesheet" href="<%- config.root %>css/google-fonts.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="<%- config.root %>css/timeline-comment.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="<%- config.root %>css/comment.css" media="screen" type="text/css">
   <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
   <script src="<%- config.root %>js/jquery-2.0.3.min.js"></script>
-  <% if (theme.github_comment) { %>
-    <script src="<%- config.root %>js/github-comment.js"></script>
+  <% if (theme.comment_js) { %>
+    <script src="<%- config.root %>js/comment.min.js"></script> 
     <script src="<%- config.root %>js/markdown.min.js"></script>
     <script src="<%- config.root %>js/timeago.min.js"></script>
 	<script src="<%- config.root %>js/spin.min.js"></script>
