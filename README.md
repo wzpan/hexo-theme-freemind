@@ -124,6 +124,7 @@ links:
 
 widgets:
 - search
+- recent_comments
 - category
 - tagcloud
 - recent_posts
