@@ -26,7 +26,7 @@ Freemind aims at fully taking advantages of Bootstrap.
   - label - a label with text and specified color;
   - badge - a badge with text;
   - alert - alert messages with text and specified color;
-* **Local Search Engine** - a build-in local search engine, with the help of my another project [hexo-generator-search](https://github.com/paichyperiondev/hexo-generator-search).
+* **Local Search Engine** - a built-in local search engine, with the help of my another project [hexo-generator-search](https://github.com/paichyperiondev/hexo-generator-search).
 * **Color Themes** - luxuriant Bootswatch color themes for choice;
 * **Pin to top** - able to pin any article to the top of the first index page;
 * **Built-in Comment System** - a comment system based on my another project [comment.js](https://github.com/wzpan/comment.js).
