@@ -20,15 +20,16 @@ Freemind aims at fully taking advantages of Bootstrap.
 
 * **Bootstrap** - get the power of Twitter Bootstrap with minimal hassle;
 * **2 columns layout** - the most traditional and comfortable blog layout;
-* **Tag plugins** - luxuriant Bootstrap tag plugins, provided by [hexo-tag-bootstrap](https://github.com/wzpan/hexo-tag-bootstrap), including:
+* **Tag plugins** - luxuriant Bootstrap tag plugins, provided by my another project [hexo-tag-bootstrap](https://github.com/wzpan/hexo-tag-bootstrap), including:
   - textcolor - a paragraph of text with specified color;
   - button - a button with target links, text and specified color;
   - label - a label with text and specified color;
   - badge - a badge with text;
-  - alert - alert messages with text and specified color; 
-* **Local Search Engine** - a build-in local search engine, with the help of [hexo-generator-search](https://github.com/paichyperiondev/hexo-generator-search).
+  - alert - alert messages with text and specified color;
+* **Local Search Engine** - a build-in local search engine, with the help of my another project [hexo-generator-search](https://github.com/paichyperiondev/hexo-generator-search).
 * **Color Themes** - luxuriant Bootswatch color themes for choice;
-* **Pin to top** - able to pin any article to the top of the first index page.
+* **Pin to top** - able to pin any article to the top of the first index page;
+* **Built-in Comment System** - a comment system based on my another project [comment.js](https://github.com/wzpan/comment.js).
 
 ![color themes](http://wzpan.github.io/hexo-theme-freemind/images/color-themes.gif)
 
@@ -142,11 +143,24 @@ baidu_tongji:
   siteid:
 
 # Search
-swiftype_key: 
+swiftype_key:
 
 # share button
 bdshare: true
 jiathis: false
+
+# built-in comment system
+comment_js:
+  type: "github"
+  user: "wzpan"
+  repo: "hexo-theme-freemind-blog"
+  btn_class: "btn btn-large btn-primary"
+  comments_target: "#comment-thread"
+  recent_comments_target: "#recent-comments"
+  loading_target: "#loading-spin"
+  client_id: "xxxxxx"
+  client_secret: "xxxxxx"
+  count: 5
 ```
 
 * **slogan** - slogan display at the index page
@@ -162,6 +176,14 @@ jiathis: false
 * **swiftype_key** - Swifttype key to enable local searching. Leave it blank or comment this line if you want to use build-in local search engine.
 * **bdshare** - Baidu share button at the bottom of article.
 * **jiathis** - jiathis share button at the bottom of article.
+* **comment_js** - settings for comment.js.
+  * `type`: the site as the backend. Currently supports Github and OSChina.
+  * `user`: your site's user account.
+  * `repo`: your repo for comment issue tracking.
+  * `btn_class`: css class name for the "go to comment" button.
+  * `client_id`(optional but recommended): the client id of your OAuth App.
+  * `client_secret`(optional but recommended): the client secret of your OAuth App.
+  * `count`(optional): the maximize length of the comment list. Default value is 5.
 
 
 If you prefer to use disqus, the setting of disqus should be placed at your **root** `_config.yml`:
@@ -179,6 +201,7 @@ There are some new front-matter settings in Freemind that you can use to decorat
 * **feature** - sets a feature image that will be show at the index page
 * **toc** - renders a table of contents
 * **top** - pin the article to top if it is set to `true`
+* **issue_id** - comment.js `issue_id` for explicitly point out which Github issue should be connect to your post. For most situations you don't need it unless the post doesn't link to the issue you want.
 
 For example:
 
