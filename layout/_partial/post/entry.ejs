@@ -10,10 +10,9 @@
 	<% } %>
 	<% if (item.excerpt && index) { %>
 		<%- item.excerpt %>
-		<!-- only display read_more button if there's more to display -->
-		<a type="button" href="<%- config.root %><%- item.path %>#more" class="btn btn-default more"><%= __('read_more') %></a>
 	<% } else { %>
 		<%- item.content %>
 	<% } %>
 	</div>
+  <a type="button" href="<%- config.root %><%- item.path %>#more" class="btn btn-default more"><%= __('read_more') %></a>
 </div>
