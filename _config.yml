@@ -63,6 +63,7 @@ baidu_tongji:
 bdshare: true
 jiathis: false
 
+# built-in comment system
 comment_js:
   type: "github"
   user: "wzpan"
