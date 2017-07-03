@@ -6,19 +6,19 @@
 	 <div id="loading-spin"></div>
 	 <script type="text/javascript">
 	   getComments({
-		   type: "<%= theme.comment_js.type %>",
-	           user: "<%= theme.comment_js.user %>",
-	           repo: "<%= theme.comment_js.repo %>",
+           type: "<%= theme.comment_js.type %>" ? "<%= theme.comment_js.type %>" : "github",       
+	       user: "<%= theme.comment_js.user %>",
+	       repo: "<%= theme.comment_js.repo %>",
 		   client_id: "<%= theme.comment_js.client_id %>",
-                   client_secret: "<%= theme.comment_js.client_secret %>",
+           client_secret: "<%= theme.comment_js.client_secret %>",
 		   no_comment: "<%= __('no_comment') %>",
 		   go_to_comment: "<%= __('go_to_comment') %>",
 		   no_issue: "<%= __('no_issue') %>",
 		   issue_title: "<%= page.title %>",
 		   issue_id: "<%= page.issue_id %>",
-		   btn_class: "<%= theme.comment_js.btn_class %>" ? "<%= theme.comment_js.btn_class %>" : "btn",
-		   comments_target: "<%= theme.comment_js.comments_target %>" ? "<%= theme.comment_js.comments_target %>" : "#comment-thread",
-		   loading_target: "<%= theme.comment_js.loading_target %>"
+		   btn_class: "btn btn-primary",
+		   comments_target: "#comment-thread",
+		   loading_target: "#loading_spin"
 		   });
 	 </script>
   <% } else if(theme.duoshuo_shortname) { %>

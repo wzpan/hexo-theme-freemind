@@ -68,10 +68,6 @@ comment_js:
   type: "github"
   user: "wzpan"
   repo: "hexo-theme-freemind-blog"
-  btn_class: "btn btn-large btn-primary"
-  comments_target: "#comment-thread"
-  recent_comments_target: "#recent-comments"
-  loading_target: "#loading-spin"
   client_id: "bf7d4ba11877db88543e"
   client_secret: "bff8a6b06b745c0bfcdccbe225623ea8e2a057bb"
   count: 5

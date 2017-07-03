@@ -4,13 +4,13 @@
 		<div id="recent-comments"></div>		
 		<script type="text/javascript">
 		    getRecentCommentsList({
-			   type: "<%= theme.comment_js.type %>",
+			   type: "<%= theme.comment_js.type %>" ? "<%= theme.comment_js.type %>" : "github",
 			   user: "<%= theme.comment_js.user %>",
-                           repo: "<%= theme.comment_js.repo %>",
-                           client_id: "<%= theme.comment_js.client_id %>",
-                           client_secret: "<%= theme.comment_js.client_secret %>",
+               repo: "<%= theme.comment_js.repo %>",
+               client_id: "<%= theme.comment_js.client_id %>",
+               client_secret: "<%= theme.comment_js.client_secret %>",
 			   count: "<%= theme.comment_js.count %>" ? "<%= theme.comment_js.count %>" : 5,
-			   recent_comments_target: "<%= theme.comment_js.recent_comments_target %>" ? "<%= theme.comment_js.recent_comments_target %>" : "#recent-comments"
+			   recent_comments_target: "#recent-comments"
 			});
 		</script>
 	<% } %>
