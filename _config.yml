@@ -40,10 +40,10 @@ widgets:
 - recent_comments
 - category
 - tagcloud
-- recent_posts  
+- recent_posts
 - links
 
-rss: 
+rss:
 fancybox: true
 favicon: favicon.png
 duoshuo_shortname: #freemindtheme
@@ -71,6 +71,6 @@ comment_js:
   comments_target: "#comment-thread"
   recent_comments_target: "#recent-comments"
   loading_target: "#loading-spin"
-  reversed_token: "232b130b29af1ea018cec5eea694fd2be76b4cd1"
+  client_id: "bf7d4ba11877db88543e"
+  client_secret: "bff8a6b06b745c0bfcdccbe225623ea8e2a057bb"
   count: 5
-  

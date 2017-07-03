@@ -6,19 +6,20 @@
 	 <div id="loading-spin"></div>
 	 <script type="text/javascript">
 	   getComments({
-		       type: "<%= theme.comment_js.type %>",
+		   type: "<%= theme.comment_js.type %>",
 	           user: "<%= theme.comment_js.user %>",
 	           repo: "<%= theme.comment_js.repo %>",
-			   reversed_token: "<%= theme.comment_js.reversed_token %>",
-			   no_comment: "<%= __('no_comment') %>",
-			   go_to_comment: "<%= __('go_to_comment') %>",
-			   no_issue: "<%= __('no_issue') %>",
-			   issue_title: "<%= page.title %>",
-			   issue_id: "<%= page.issue_id %>",
-			   btn_class: "<%= theme.comment_js.btn_class %>" ? "<%= theme.comment_js.btn_class %>" : "btn",
-			   comments_target: "<%= theme.comment_js.comments_target %>" ? "<%= theme.comment_js.comments_target %>" : "#comment-thread",
-			   loading_target: "<%= theme.comment_js.loading_target %>"
-			   });
+		   client_id: "<%= theme.comment_js.client_id %>",
+                   client_secret: "<%= theme.comment_js.client_secret %>",
+		   no_comment: "<%= __('no_comment') %>",
+		   go_to_comment: "<%= __('go_to_comment') %>",
+		   no_issue: "<%= __('no_issue') %>",
+		   issue_title: "<%= page.title %>",
+		   issue_id: "<%= page.issue_id %>",
+		   btn_class: "<%= theme.comment_js.btn_class %>" ? "<%= theme.comment_js.btn_class %>" : "btn",
+		   comments_target: "<%= theme.comment_js.comments_target %>" ? "<%= theme.comment_js.comments_target %>" : "#comment-thread",
+		   loading_target: "<%= theme.comment_js.loading_target %>"
+		   });
 	 </script>
   <% } else if(theme.duoshuo_shortname) { %>
   	 <div class="ds-thread" data-thread-key="<%- page.path %>" data-title="<%- page.title %>" data-url="<%- page.permalink %>"></div>  
