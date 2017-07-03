@@ -155,10 +155,6 @@ comment_js:
   type: "github"
   user: "wzpan"
   repo: "hexo-theme-freemind-blog"
-  btn_class: "btn btn-large btn-primary"
-  comments_target: "#comment-thread"
-  recent_comments_target: "#recent-comments"
-  loading_target: "#loading-spin"
   client_id: "xxxxxx"
   client_secret: "xxxxxx"
   count: 5
@@ -181,7 +177,6 @@ comment_js:
   * `type`: the site as the backend. Currently supports Github and OSChina.
   * `user`: your site's user account.
   * `repo`: your repo for comment issue tracking.
-  * `btn_class`: css class name for the "go to comment" button.
   * `client_id`(optional but recommended): the client id of your OAuth App.
   * `client_secret`(optional but recommended): the client secret of your OAuth App.
   * `count`(optional): the maximize length of the comment list. Default value is 5.
