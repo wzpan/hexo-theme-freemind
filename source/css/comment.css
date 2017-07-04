@@ -4,6 +4,7 @@
     width: 100%;
     /*background-color: #fff;*/
     border-bottom: 2px solid #e6ebf1;
+	margin-bottom: 14px;
 }
 
 .discussion-timeline::before {
@@ -126,18 +127,19 @@
 .timeline-comment-header {
     padding-right: 15px;
     padding-left: 15px;
-    color: #586069;
+	color: #586069;
     background-color: #f6f8fa;
     border-bottom: 1px solid #d1d5da;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
-	line-height: 1em;
+	line-height: 1em!important;	
 }
 
 .timeline-comment-header h3 {
   margin-top: 0;
   margin-bottom: 0;
   color: #586069;
+  line-height: 40px;
 }
 
 .timeline-comment-header a {
@@ -191,7 +193,8 @@
 }
 
 .d-block {
-    display: block !important;
+  display: block !important;
+  border-bottom: 0px;
 }
 
 .markdown-body>*:last-child {
