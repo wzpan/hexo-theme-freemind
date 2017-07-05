@@ -237,6 +237,7 @@ var _getRecentCommentList = function(comment_list, i, render_count, total_count,
     if (!content || content == '') {
         i++;
         _getRecentCommentList(comment_list, i, render_count, total_count, comments, callback);
+        callback = null;
         return;
     }
     if (!title) {
