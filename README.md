@@ -20,7 +20,7 @@ Freemind aims at fully taking advantages of Bootstrap.
 
 * **Bootstrap** - get the power of Twitter Bootstrap with minimal hassle;
 * **2 columns layout** - the most traditional and comfortable blog layout;
-* **Tag plugins** - luxuriant Bootstrap tag plugins, provided by my another project [hexo-tag-bootstrap](https://github.com/wzpan/hexo-tag-bootstrap), including:
+* **Tag plugins** - luxuriant Bootstrap tag plugins, provided by my another project [hexo-tag-bootstrap](https://github.com/wzpan/hexo-tag-bootstrap). Including:
   - textcolor - a paragraph of text with specified color;
   - button - a button with target links, text and specified color;
   - label - a label with text and specified color;
