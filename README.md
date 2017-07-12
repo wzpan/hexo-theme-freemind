@@ -1,15 +1,15 @@
 Hexo-Theme-Freemind
 ===
 
-![screenshots](http://wzpan.github.io/hexo-theme-freemind/images/screenshots.png)
+![screenshots](http://wzpan.github.io/hexo-theme-freemind-blog/images/screenshots.png)
 
 Freemind aims at fully taking advantages of Bootstrap.
 
-* [Demo](http://wzpan.github.io/hexo-theme-freemind/)
-* [Q&A](http://wzpan.github.io/hexo-theme-freemind/2014/03/16/qna/)
-* [Tag Plugins](http://wzpan.github.io/hexo-theme-freemind/2014/03/16/tag-plugins/)
-* [Color Themes](http://wzpan.github.io/hexo-theme-freemind/2016/01/30/color-themes/)
-* [Readme in Chinese](http://hahack.com/codes/hexo-theme-freemind/)
+* [Demo](http://wzpan.github.io/hexo-theme-freemind-blog/)
+* [Q&A](http://wzpan.github.io/hexo-theme-freemind-blog/2014/03/16/qna/)
+* [Tag Plugins](http://wzpan.github.io/hexo-theme-freemind-blog/2014/03/16/tag-plugins/)
+* [Color Themes](http://wzpan.github.io/hexo-theme-freemind-blog/2016/01/30/color-themes/)
+* [Readme in Chinese](http://hahack.com/codes/hexo-theme-freemind-blog/)
 
 ## Requirements ##
 
@@ -31,7 +31,7 @@ Freemind aims at fully taking advantages of Bootstrap.
 * **Pin to top** - able to pin any article to the top of the first index page;
 * **Built-in Comment System** - a comment system based on my another project [comment.js](https://github.com/wzpan/comment.js).
 
-![color themes](http://wzpan.github.io/hexo-theme-freemind/images/color-themes.gif)
+![color themes](http://wzpan.github.io/hexo-theme-freemind-blog/images/color-themes.gif)
 
 ## Install ##
 
