@@ -257,20 +257,30 @@ var _renderHTML = function _renderHTML(params) {
     $(comments_target).append(res);
 };
 
+var CompareDate = function CompareDate(a, b) {
+    var d1 = a['created_at'].replace('T', ' ').replace('Z', '').replace(/-/g, "\/");
+    var d2 = b['created_at'].replace('T', ' ').replace('Z', '').replace(/-/g, "\/");
+    return new Date(d1) > new Date(d2);
+};
+
 var _getRecentIssues = function _getRecentIssues(params, callback) {
     var count = void 0;
     count = params.count;
 
     var api_addr = type == 'github' ? github_api_addr : oschina_api_addr;
     $.ajax({
-        url: api_addr + username + '/' + repo + '/issues\?per_page\=100',
+        url: api_addr + username + '/' + repo + '/issues?per_page=100&sort=created&direction=desc',
         dataType: 'json',
         cache: false,
         crossDomain: true,
         data: client_id && client_secret ? "client_id=" + client_id + "&client_secret=" + client_secret : '',
         success: function success(issues) {
             if (issues.length > count) {
-                issues = issues.sort('created_at').reverse().slice(0, 5);
+                if (navigator.userAgent.indexOf("MSIE") != -1 || navigator.userAgent.indexOf("Edge") != -1 || !!document.documentMode == true) {
+                    issues = issues.sort(CompareDate).slice(0, 5);
+                } else {
+                    issues = issues.sort(CompareDate).reverse().slice(0, 5);
+                }
             }
             callback && typeof callback === "function" && callback(issues);
             callback = null;
@@ -288,14 +298,18 @@ var _getRecentComments = function _getRecentComments(params, callback) {
 
     var api_addr = type == 'github' ? github_api_addr : oschina_api_addr;
     $.ajax({
-        url: api_addr + username + '/' + repo + '/issues/comments\?per_page\=100',
+        url: api_addr + username + '/' + repo + '/issues/comments?per_page=100&sort=created&direction=desc',
         dataType: 'json',
         cache: false,
         crossDomain: true,
         data: client_id && client_secret ? "client_id=" + client_id + "&client_secret=" + client_secret : '',
         success: function success(comments) {
             if (comments.length > count) {
-                comments = comments.sort('created_at').reverse().slice(0, 5);
+                if (navigator.userAgent.indexOf("MSIE") != -1 || navigator.userAgent.indexOf("Edge") != -1 || !!document.documentMode == true) {
+                    comments = comments.sort(CompareDate).slice(0, 5);
+                } else {
+                    comments = comments.sort(CompareDate).reverse().slice(0, 5);
+                }
             }
 
             callback && typeof callback === "function" && callback(comments);
@@ -306,12 +320,6 @@ var _getRecentComments = function _getRecentComments(params, callback) {
             callback = null;
         }
     });
-};
-
-var CompareDate = function CompareDate(a, b) {
-    var d1 = a['created_at'].replace('T', ' ').replace('Z', '').replace(/-/g, "\/");
-    var d2 = b['created_at'].replace('T', ' ').replace('Z', '').replace(/-/g, "\/");
-    return new Date(d1) > new Date(d2);
 };
 
 var getRecentCommentsList = function getRecentCommentsList(params) {
@@ -333,7 +341,11 @@ var getRecentCommentsList = function getRecentCommentsList(params) {
         recentList = recentList.concat(issues);
         _getRecentComments(params, function (comments) {
             recentList = recentList.concat(comments);
-            recentList = recentList.sort(CompareDate).reverse();
+            if (navigator.userAgent.indexOf("MSIE") != -1 || navigator.userAgent.indexOf("Edge") != -1 || !!document.documentMode == true) {
+                recentList = recentList.sort(CompareDate);
+            } else {
+                recentList = recentList.sort(CompareDate).reverse();
+            }
             _renderRecentCommentList(recentList, count);
         });
     });
