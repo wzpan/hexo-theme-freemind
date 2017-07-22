@@ -24,7 +24,6 @@ var github_addr = "https://github.com/";
 var github_api_addr = "https://api.github.com/repos/";
 var oschina_addr = "http://git.oschina.net/";
 var oschina_api_addr = "http://git.oschina.net/api/v5/repos/";
-var md = window.markdownit();
 var spinOpts = {
     lines: 13,
     length: 10,
@@ -43,6 +42,20 @@ var spinOpts = {
     top: 'auto',
     left: '50%'
 };
+// syntax highlighting
+marked.setOptions({
+    highlight: function (code, lang) {
+        return hljs.highlightAuto(code).value;
+    }
+});
+function Highlighting(){
+    var markdowns = document.getElementsByClassName('markdown');
+    for(var i=0;i<markdowns.length;i++){
+        if(markdowns[i].innerHTML) markdowns[i].innerHTML =marked(markdowns[i].innerHTML);
+    }
+}
+window.addEventListener('DOMContentLoaded', Highlighting, false);
+window.addEventListener('load', Highlighting, false);
 
 var _getComment = function _getComment(params, callback) {
     var comments = void 0,
@@ -158,7 +171,7 @@ var _getIssueByUrl = function _getIssueByUrl(issue_url, callback) {
 var _renderComment = function _renderComment(comment) {
     var timeagoInstance = timeago();
     var user = comment.user;
-    var content = md.render(comment.body);
+    var content = marked(comment.body);
     var ago = timeagoInstance.format(comment.created_at);
     var current_user = user.login == username ? "current-user" : "";
     var addr = type == 'github' ? github_addr : oschina_addr;
@@ -181,7 +194,7 @@ var _getRecentCommentList = function _getRecentCommentList(comment_list, i, rend
     }
     var comment = comments[i];
     if (!comment) return;
-    var content = md.render(comment.body);
+    var content = marked(comment.body);
     var title = comment.title;
     var user = comment.user;
     var timeagoInstance = timeago();
