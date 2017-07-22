@@ -24,6 +24,7 @@ var github_addr = "https://github.com/";
 var github_api_addr = "https://api.github.com/repos/";
 var oschina_addr = "http://git.oschina.net/";
 var oschina_api_addr = "http://git.oschina.net/api/v5/repos/";
+var md = window.markdownit();
 var spinOpts = {
     lines: 13,
     length: 10,
@@ -157,7 +158,7 @@ var _getIssueByUrl = function _getIssueByUrl(issue_url, callback) {
 var _renderComment = function _renderComment(comment) {
     var timeagoInstance = timeago();
     var user = comment.user;
-    var content = markdown.toHTML(comment.body);
+    var content = md.render(comment.body);
     var ago = timeagoInstance.format(comment.created_at);
     var current_user = user.login == username ? "current-user" : "";
     var addr = type == 'github' ? github_addr : oschina_addr;
@@ -180,7 +181,7 @@ var _getRecentCommentList = function _getRecentCommentList(comment_list, i, rend
     }
     var comment = comments[i];
     if (!comment) return;
-    var content = markdown.toHTML(comment.body);
+    var content = md.render(comment.body);
     var title = comment.title;
     var user = comment.user;
     var timeagoInstance = timeago();
