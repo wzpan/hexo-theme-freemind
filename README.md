@@ -9,7 +9,7 @@ Freemind aims at fully taking advantages of Bootstrap.
 * [Q&A](http://wzpan.github.io/hexo-theme-freemind-blog/2014/03/16/qna/)
 * [Tag Plugins](http://wzpan.github.io/hexo-theme-freemind-blog/2014/03/16/tag-plugins/)
 * [Color Themes](http://wzpan.github.io/hexo-theme-freemind-blog/2016/01/30/color-themes/)
-* [Readme in Chinese](http://hahack.com/codes/hexo-theme-freemind-blog/)
+* [Readme in Chinese](http://hahack.com/codes/hexo-theme-freemind/)
 
 ## Requirements ##
 
