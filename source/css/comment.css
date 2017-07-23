@@ -373,3 +373,24 @@
 #recent-comments .comment-widget-date {
   font-size: 12px;
 }
+
+.octicon {
+    vertical-align: text-bottom;
+    display: inline-block;
+    vertical-align: text-top;
+    fill: currentColor;
+}
+
+.discussion-item-icon {
+    float: left;
+    width: 32px;
+    height: 32px;
+    margin-top: -7px;
+    margin-left: -40px;
+    line-height: 28px;
+    color: #586069;
+    text-align: center;
+    background-color: #e6ebf1;
+    border: 2px solid #fff;
+    border-radius: 50%;
+}

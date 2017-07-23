@@ -222,15 +222,29 @@ var _renderRecentCommentList = function _renderRecentCommentList(comments, count
 };
 
 var _renderHTML = function _renderHTML(params) {
-    var issue = void 0,
+    var type = void 0,
+        issue = void 0,
         comments = void 0,
         comments_url = void 0,
         issue_title = void 0;
+    type = params.type;
     issue = params.issue;
     comments = params.comments;
     comments_url = params.comments_url;
     issue_title = params.issue_title;
+    var site = type == 'oschina' ? '<a href="http://oschina.net" class="discussion-item-entity" target="_blank">OSChina issue</a>' : '<a href="http://github.com" class="discussion-item-entity" target="_blank">Github issue</a>';
+    var footer = `
+<div class="discussion-item discussion-item-labeled">
+    <h3 class="discussion-item-header f5 text-normal" id="event-1157063333">
 
+      <span class="discussion-item-icon">
+        <svg aria-hidden="true" class="octicon octicon-tag" height="16" version="1.1" viewBox="0 0 16 16" width="14"><path fill-rule="evenodd" d="M15 1H6c-.55 0-1 .45-1 1v2H1c-.55 0-1 .45-1 1v6c0 .55.45 1 1 1h1v3l3-3h4c.55 0 1-.45 1-1V9h1l3 3V9h1c.55 0 1-.45 1-1V2c0-.55-.45-1-1-1zM9 11H4.5L3 12.5V11H1V5h4v3c0 .55.45 1 1 1h3v2zm6-3h-2v1.5L11.5 8H6V2h9v6z"></path></svg>
+      </span>
+      The above comments are provided by 
+        <a href="http://github.com/wzpan/comment.js" class="discussion-item-entity" target="_blank">comment.js</a> with the help of ${site}.
+    </h3>
+</div>
+    `;
     var addr = type == 'github' ? github_addr : oschina_addr;
     var api_addr = type == 'github' ? github_api_addr : oschina_api_addr;
     if ((!issue || !issue.body || issue.body == "") && (!comments || comments.length <= 0)) {
@@ -244,7 +258,8 @@ var _renderHTML = function _renderHTML(params) {
         comments.forEach(function (comment) {
             _res2 += _renderComment(comment);
         });
-        _res2 += '</div></div>';
+        _res2 += footer;
+        _res2 += '</div></div>';        
         $(comments_target).append(_res2);
     }
     var issue_url = void 0;
@@ -387,6 +402,7 @@ var getComments = function getComments(params) {
                     page: 1 }, function (comments) {
                     loading_target && spinner.spin();
                     _renderHTML({
+                        type: type,
                         issue: issue,
                         comments: comments,
                         comments_url: comments_url,
@@ -397,6 +413,7 @@ var getComments = function getComments(params) {
             } else {
                 loading_target && spinner.spin();
                 _renderHTML({
+                    type: type,
                     issue: issue,
                     comments: comments,
                     comments_url: comments_url,
@@ -414,6 +431,7 @@ var getComments = function getComments(params) {
                 page: 1 }, function (comments) {
                 loading_target && spinner.spin();
                 _renderHTML({
+                    type: type,
                     issue: issue,
                     comments: comments,
                     comments_url: _comments_url,
