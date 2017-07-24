@@ -153,8 +153,8 @@ jiathis: false
 # built-in comment system
 comment_js:
   type: "github"
-  user: "wzpan"
-  repo: "hexo-theme-freemind-blog"
+  user: "your-account"
+  repo: "your-repo"
   client_id: "xxxxxx"
   client_secret: "xxxxxx"
   count: 5
