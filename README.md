@@ -5,10 +5,10 @@ Hexo-Theme-Freemind
 
 Freemind aims at fully taking advantages of Bootstrap.
 
-* [Demo](http://wzpan.github.io/hexo-theme-freemind-blog/)
-* [Q&A](http://wzpan.github.io/hexo-theme-freemind-blog/2014/03/16/qna/)
-* [Tag Plugins](http://wzpan.github.io/hexo-theme-freemind-blog/2014/03/16/tag-plugins/)
-* [Color Themes](http://wzpan.github.io/hexo-theme-freemind-blog/2016/01/30/color-themes/)
+* [Demo](http://hahack.com/hexo-theme-freemind-blog/)
+* [Q&A](http://hahack.com/hexo-theme-freemind-blog/2014/03/16/qna/)
+* [Tag Plugins](http://hahack.com/hexo-theme-freemind-blog/2014/03/16/tag-plugins/)
+* [Color Themes](http://hahack.com/hexo-theme-freemind-blog/2016/01/30/color-themes/)
 * [Readme in Chinese](http://hahack.com/codes/hexo-theme-freemind/)
 
 ## Requirements ##
@@ -173,7 +173,7 @@ comment_js:
 * **swiftype_key** - Swifttype key to enable local searching. Leave it blank or comment this line if you want to use build-in local search engine.
 * **bdshare** - Baidu share button at the bottom of article.
 * **jiathis** - jiathis share button at the bottom of article.
-* **comment_js** - settings for comment.js.
+* **comment_js** - settings for [comment.js](http://github.com/wzpan/comment.js).
   * `type`: the site as the backend. Currently supports Github and OSChina.
   * `user`: your site's user account.
   * `repo`: your repo for comment issue tracking.
