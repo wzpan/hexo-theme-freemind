@@ -1,7 +1,7 @@
 <div class="widget">
     <% if(theme.comment_js) { %>
-	    <h4 class="dsq-widget-title">Recent Comments</h4>
-		<div id="recent-comments"></div>		
+	    <h4 class="dsq-widget-title"><%= __('recent_comments') %></h4>
+		<div id="recent-comments"></div>
 		<script type="text/javascript">
 		    getRecentCommentsList({
 			   type: "<%= theme.comment_js.type %>" ? "<%= theme.comment_js.type %>" : "github",
