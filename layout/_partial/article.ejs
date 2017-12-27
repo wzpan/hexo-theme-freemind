@@ -31,6 +31,11 @@
 	  <%- item.content %>	  
 	</div>
 
+	<!-- recommended posts -->
+	<% if (post && theme.recommended_posts.enabled) { %>
+		<%- partial('post/recommended_posts', {page: item, site: site}) %>
+	<% } %>
+
 	<div>
   	<center>
 	<%- partial('post/pagination', {page: item}) %>

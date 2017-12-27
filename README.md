@@ -53,7 +53,13 @@ $ npm install hexo-tag-bootstrap --save
 $ npm install hexo-generator-search --save
 ```
 
-4) Create pages
+4) install [hexo-recommended-posts](https://github.com/huiwang/hexo-recommended-posts) (*optional*):
+
+``` sh
+$ npm install hexo-recommended-posts --save
+```
+
+5) Create pages
 
 Freemind offers you the customized Categories, Tags and About pages. But you need to manually create these page at your 'source' folder.
 
@@ -135,6 +141,11 @@ favicon: favicon.png
 fancybox: true
 duoshuo_shortname:
 
+# Recommended posts
+# Dependency: https://github.com/huiwang/hexo-recommended-posts
+recommended_posts:
+  enabled: false
+
 # analytics
 google_analytics:
   enable: false
@@ -169,6 +180,7 @@ comment_js:
 * **rss** - RSS link
 * **fancybox** - Enable [Fancybox](http://fancyapps.com/fancybox/)
 * **duoshuo_shortname** - DuoShuo ID, if you prefer to use duoshuo instead of Disqus
+* **recommended_posts** - Enable recommended posts
 * **analytics** - Analytics ID. Supports both Google Analytics and Baidu Tongji.
 * **swiftype_key** - Swifttype key to enable local searching. Leave it blank or comment this line if you want to use build-in local search engine.
 * **bdshare** - Baidu share button at the bottom of article.
