@@ -99,7 +99,7 @@ var searchFunc = function(path, search_id, content_id) {
                                     end = content.length;
                                 }
 
-                                var match_content = content.substr(start, end);
+                                var match_content = content.substring(start, end);
 
                                 // highlight all keywords
                                 keywords.forEach(function (keyword) {
