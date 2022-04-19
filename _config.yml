@@ -42,8 +42,9 @@ widgets:
 - tagcloud
 - recent_posts
 - links
+- rss
 
-rss:
+rss: atom.xml
 fancybox: true
 favicon: favicon.png
 duoshuo_shortname: #freemindtheme
