@@ -29,7 +29,7 @@
 
 		        <% site.posts.sort('date', -1).forEach(function(it){ %>
 			        <% if (it.categories.length == 1 && it.categories.data[0]._id == item._id){ %>
-		   	        <li class="listing-item"><a href="<%= config.root %><%= it.path %>" <% if (it.description) { %> title="<%= it.description %>" <% } %>><%= it.title %></a></li>
+                    <li class="listing-item"><a href="<%= url_for(it.path) %>" <% if (it.description) { %> title="<%= it.description %>" <% } %>><%= it.title %></a></li>
 			        <% } %>
 		        <% }); %>
 		   </ul>
