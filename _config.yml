@@ -76,3 +76,10 @@ comment_js:
   client_id: "bf7d4ba11877db88543e"
   client_secret: "bff8a6b06b745c0bfcdccbe225623ea8e2a057bb"
   count: 5
+
+# If you want to use gitalk for comments, please uncomment the following, fill in the fields, and comment out the comment_js above.
+#comment_gitalk:
+#  client_id: "<client_id>"
+#  client_secret: "<client_secret>"
+#  repo: "<repo-name>"
+#  user: "<owner-username>"
