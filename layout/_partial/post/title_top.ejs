@@ -9,7 +9,7 @@
 	<!-- display as entry -->	
 		<h3 class="title-top">
 			<div class="date"> <%= item.date.format(config.date_format) %> </div>
-			<div class="article-title"><a href="<%- config.root %><%- item.path %>" <% if(item.description) { %>title="<%= item.description %>"<% } %> class="article-title-text"><%= item.title %></span></a><span class="badge"><%= __('top') %></div>						
+			<div class="article-title"><a href="<%- url_for(item.path) %>" <% if(item.description) { %>title="<%= item.description %>"<% } %> class="article-title-text"><%= item.title %></span></a><span class="badge"><%= __('top') %></div>
 		</h3>
 	<% } else { %>
 		<div class="page-header <% if (theme.inverse){ %>page-header-inverse <% } %>">		

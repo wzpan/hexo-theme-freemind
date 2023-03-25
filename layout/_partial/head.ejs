@@ -36,10 +36,10 @@
   <% } %>
 
   <% if (theme.rss){ %>
-    <link rel="alternative" href="<%- config.root %><%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml">
+    <link rel="alternative" href="<%- url_for(theme.rss) %>" title="<%= config.title %>" type="application/atom+xml">
   <% } %>
   <% if (theme.favicon){ %>
-    <link href="<%- config.root %><%- theme.favicon %>" rel="icon">
+    <link href="<%- url_for(theme.favicon) %>" rel="icon">
   <% } %>
 
   <!-- CSS -->

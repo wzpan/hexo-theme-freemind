@@ -74,7 +74,7 @@
 		   	  <span class="title link"><a href="<%- item.link %>" target="_blank" <% if (item.description) { %> title="<%= item.description %>" <% } %>><%= item.link %></a></span>
 		   <% } %>
 		<% } else { %>
-		   <span class="title"><a href="<%- config.root %><%- item.path %>" <% if (item.description) { %> title="<%= item.description %>" <% } %>><%= item.title %></a></span>
+		   <span class="title"><a href="<%- url_for(item.path) %>" <% if (item.description) { %> title="<%= item.description %>" <% } %>><%= item.title %></a></span>
 		<% } %>
 		</li>			
 		<% }); %>
