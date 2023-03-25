@@ -99,6 +99,8 @@ slogan: Yet another bootstrap theme.
 
 theme: bootstrap
 inverse: true
+# whether to show h2 and h3 titles in excerpts
+show_title_in_excerpt: false
 
 menu:
   - title: Archives

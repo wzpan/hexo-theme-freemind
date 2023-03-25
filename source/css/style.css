@@ -375,11 +375,11 @@ h4 {
    entry
    ========================================================================== */
 
-.page .entry{
+.page .entry, .page .entry-show-title{
   padding-top: 10px 0;
 }
 
-.page .entry .row{
+.page .entry .row, .page .entry-show-title .row{
   padding-left: 20px;
   padding-right: 5px;
 }
@@ -393,11 +393,11 @@ h4 {
   display:block; overflow: hidden; width: 0; height: 0;
 }
 
-.page .entry .col-md-8{
+.page .entry .col-md-8, .page .entry-show-title .col-md-8{
   margin: 10px 0;
 }
 
-.page .entry .thumbnail{
+.page .entry .thumbnail, .page .entry-show-title .thumbnail{
   margin: 10px;
 }
 
