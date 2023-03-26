@@ -1,4 +1,8 @@
+<% if (theme.show_title_in_excerpt) { %>
+<div class="entry-show-title">
+<% } else { %>
 <div class="entry">
+<% } %>
   <div class="row">
 	<% if (item.feature ) { %>
            <% if (config.post_asset_folder){ %>
