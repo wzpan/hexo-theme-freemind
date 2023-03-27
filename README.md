@@ -137,6 +137,7 @@ widgets:
 - tagcloud
 - recent_posts
 - links
+#- rss  # uncomment this to show an RSS button in the sidebar
 
 rss: atom.xml
 favicon: favicon.png

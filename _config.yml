@@ -44,8 +44,9 @@ widgets:
 - tagcloud
 - recent_posts
 - links
+#- rss  # uncomment this to show an RSS button in the sidebar
 
-rss:
+rss: atom.xml
 fancybox: true
 favicon: favicon.png
 duoshuo_shortname: #freemindtheme
