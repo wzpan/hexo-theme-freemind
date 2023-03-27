@@ -42,7 +42,7 @@ widgets:
 - tagcloud
 - recent_posts
 - links
-- rss
+#- rss  # uncomment this to show an RSS button in the sidebar
 
 rss: atom.xml
 fancybox: true
