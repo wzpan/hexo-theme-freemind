@@ -171,6 +171,13 @@ comment_js:
   client_id: "xxxxxx"
   client_secret: "xxxxxx"
   count: 5
+
+# If you prefer to use gitalk for comments, please uncomment the following, fill in the fields, and comment out the comment_js above.
+#comment_gitalk:
+#  client_id: "<client_id>"
+#  client_secret: "<client_secret>"
+#  repo: "<repo-name>"
+#  user: "<owner-username>"
 ```
 
 * **slogan** - slogan display at the index page
@@ -194,6 +201,11 @@ comment_js:
   * `client_id`(optional but recommended): the client id of your OAuth App.
   * `client_secret`(optional but recommended): the client secret of your OAuth App.
   * `count`(optional): the maximize length of the comment list. Default value is 5.
+* **comment_gitalk** - settings for [Gitalk](https://github.com/gitalk/gitalk). Gitalk creates an issue for each page in a GitHub repo, and the visitor's comments are stored as comments to the issues.
+  * `client_id`: the Client ID for GitHub Application.
+  * `client_secret`: the Client Secret for GitHub Application.
+  * `repo`: your GitHub repo to store comments.
+  * `user`: the username of your GitHub account.
 
 
 If you prefer to use disqus, the setting of disqus should be placed at your **root** `_config.yml`:
